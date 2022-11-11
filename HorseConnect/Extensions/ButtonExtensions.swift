@@ -9,11 +9,11 @@ import SwiftUI
 
 extension Button {
     
-    func primaryButtonStyle(isEnabled: Bool) -> some View {
+    func primaryButtonStyle(isEnabled: Bool, color: Color = .primaryColor) -> some View {
         self
             .buttonStyle(.bordered)
             .background(RoundedRectangle(cornerRadius: 4)
-                .foregroundColor(isEnabled ? .primaryColor : Color.gray.opacity(0)))
+                .foregroundColor(isEnabled ? color : Color.gray.opacity(0)))
             .disabled(isEnabled == false)
     }
     
