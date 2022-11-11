@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>178488255006-o6jngnfhm2pfgkv1b1k1p2rn6ot7sbak.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.178488255006-o6jngnfhm2pfgkv1b1k1p2rn6ot7sbak</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBNFyjFwMMDVcVoi4M0w5b3StrkP48uPFI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>178488255006</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>br.com.matheusmaxwell.HorseConnect</string>
+	<key>PROJECT_ID</key>
+	<string>horseconnect-86e73</string>
+	<key>STORAGE_BUCKET</key>
+	<string>horseconnect-86e73.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:178488255006:ios:200ceb7cd60ab75a5c040f</string>
+</dict>
+</plist>

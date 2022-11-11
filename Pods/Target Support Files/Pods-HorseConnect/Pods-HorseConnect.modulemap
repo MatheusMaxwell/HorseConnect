@@ -1,0 +1,6 @@
+framework module Pods_HorseConnect {
+  umbrella header "Pods-HorseConnect-umbrella.h"
+
+  export *
+  module * { export * }
+}

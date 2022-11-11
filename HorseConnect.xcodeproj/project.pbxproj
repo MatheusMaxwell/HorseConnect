@@ -3,23 +3,85 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303BD1E7291D4239007E43B3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303BD1E6291D4239007E43B3 /* HomeView.swift */; };
+		303BD1ED291D68B4007E43B3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303BD1EC291D68B4007E43B3 /* ProgressView.swift */; };
+		3077DA20291DC85F002D6607 /* ToolbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA1D291DC85F002D6607 /* ToolbarViewModel.swift */; };
+		3077DA21291DC85F002D6607 /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA1E291DC85F002D6607 /* ToolbarView.swift */; };
+		3077DA22291DC85F002D6607 /* ToolbarViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA1F291DC85F002D6607 /* ToolbarViewState.swift */; };
+		3077DA24291DC8F2002D6607 /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA23291DC8F2002D6607 /* NavigationUtil.swift */; };
+		3077DA26291DED06002D6607 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA25291DED06002D6607 /* ImagePicker.swift */; };
+		3077DA29291DF4FF002D6607 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA28291DF4FF002D6607 /* Repository.swift */; };
+		3077DA2C291DF924002D6607 /* FarmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA2B291DF924002D6607 /* FarmData.swift */; };
+		3077DA2F291DF9E1002D6607 /* FarmDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA2E291DF9E1002D6607 /* FarmDataExtensions.swift */; };
+		3077DA31291DFFC8002D6607 /* UIColorEtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA30291DFFC8002D6607 /* UIColorEtensions.swift */; };
+		3077DA33291E0366002D6607 /* SingletonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA32291E0366002D6607 /* SingletonUtil.swift */; };
+		3077DA35291E7451002D6607 /* HomeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA34291E7451002D6607 /* HomeViewState.swift */; };
+		3077DA37291E7460002D6607 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA36291E7460002D6607 /* HomeViewModel.swift */; };
+		3077DA39291E8BE8002D6607 /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA38291E8BE8002D6607 /* ColorUtil.swift */; };
 		30A21F8F291D252A000EF7D4 /* HorseConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21F8E291D252A000EF7D4 /* HorseConnectApp.swift */; };
-		30A21F91291D252A000EF7D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21F90291D252A000EF7D4 /* ContentView.swift */; };
 		30A21F93291D252B000EF7D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A21F92291D252B000EF7D4 /* Assets.xcassets */; };
 		30A21F97291D252B000EF7D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A21F96291D252B000EF7D4 /* Preview Assets.xcassets */; };
+		30A21F9F291D2590000EF7D4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21F9E291D2590000EF7D4 /* SplashView.swift */; };
+		30A21FA1291D270E000EF7D4 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FA0291D270E000EF7D4 /* SplashViewModel.swift */; };
+		30A21FA4291D274C000EF7D4 /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FA3291D274C000EF7D4 /* BindingExtensions.swift */; };
+		30A21FA6291D2760000EF7D4 /* SplashViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FA5291D2760000EF7D4 /* SplashViewState.swift */; };
+		30A21FAA291D2894000EF7D4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FA9291D2894000EF7D4 /* LoginView.swift */; };
+		30A21FAC291D293B000EF7D4 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FAB291D293B000EF7D4 /* ViewExtensions.swift */; };
+		30A21FAF291D2963000EF7D4 /* CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FAE291D2963000EF7D4 /* CornerRadiusStyle.swift */; };
+		30A21FB1291D2994000EF7D4 /* OverlayModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FB0291D2994000EF7D4 /* OverlayModifier.swift */; };
+		30A21FB3291D2A57000EF7D4 /* TextFieldOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FB2291D2A57000EF7D4 /* TextFieldOverlay.swift */; };
+		30A21FB5291D2AC0000EF7D4 /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FB4291D2AC0000EF7D4 /* ButtonExtensions.swift */; };
+		30A21FB7291D2B3E000EF7D4 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FB6291D2B3E000EF7D4 /* ColorExtensions.swift */; };
+		30A21FB9291D2B94000EF7D4 /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FB8291D2B94000EF7D4 /* TextExtensions.swift */; };
+		30A21FBB291D2BAB000EF7D4 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FBA291D2BAB000EF7D4 /* LoginViewState.swift */; };
+		30A21FBD291D2BB4000EF7D4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FBC291D2BB4000EF7D4 /* LoginViewModel.swift */; };
+		30A21FC1291D3319000EF7D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30A21FC0291D3319000EF7D4 /* GoogleService-Info.plist */; };
+		B30BB05AD8A596DAF5201755 /* Pods_HorseConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		30A21F8B291D252A000EF7D4 /* HorseConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorseConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A4B642B33612C894B67F969 /* Pods-HorseConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorseConnect.release.xcconfig"; path = "Target Support Files/Pods-HorseConnect/Pods-HorseConnect.release.xcconfig"; sourceTree = "<group>"; };
+		303BD1E6291D4239007E43B3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		303BD1E9291D5C80007E43B3 /* HorseConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorseConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		303BD1EC291D68B4007E43B3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		3077DA1D291DC85F002D6607 /* ToolbarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarViewModel.swift; sourceTree = "<group>"; };
+		3077DA1E291DC85F002D6607 /* ToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
+		3077DA1F291DC85F002D6607 /* ToolbarViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarViewState.swift; sourceTree = "<group>"; };
+		3077DA23291DC8F2002D6607 /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
+		3077DA25291DED06002D6607 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		3077DA28291DF4FF002D6607 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		3077DA2B291DF924002D6607 /* FarmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmData.swift; sourceTree = "<group>"; };
+		3077DA2E291DF9E1002D6607 /* FarmDataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmDataExtensions.swift; sourceTree = "<group>"; };
+		3077DA30291DFFC8002D6607 /* UIColorEtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorEtensions.swift; sourceTree = "<group>"; };
+		3077DA32291E0366002D6607 /* SingletonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonUtil.swift; sourceTree = "<group>"; };
+		3077DA34291E7451002D6607 /* HomeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewState.swift; sourceTree = "<group>"; };
+		3077DA36291E7460002D6607 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3077DA38291E8BE8002D6607 /* ColorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
 		30A21F8E291D252A000EF7D4 /* HorseConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorseConnectApp.swift; sourceTree = "<group>"; };
-		30A21F90291D252A000EF7D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		30A21F92291D252B000EF7D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30A21F94291D252B000EF7D4 /* HorseConnect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HorseConnect.entitlements; sourceTree = "<group>"; };
 		30A21F96291D252B000EF7D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		30A21F9E291D2590000EF7D4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		30A21FA0291D270E000EF7D4 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		30A21FA3291D274C000EF7D4 /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
+		30A21FA5291D2760000EF7D4 /* SplashViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewState.swift; sourceTree = "<group>"; };
+		30A21FA9291D2894000EF7D4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		30A21FAB291D293B000EF7D4 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		30A21FAE291D2963000EF7D4 /* CornerRadiusStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusStyle.swift; sourceTree = "<group>"; };
+		30A21FB0291D2994000EF7D4 /* OverlayModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayModifier.swift; sourceTree = "<group>"; };
+		30A21FB2291D2A57000EF7D4 /* TextFieldOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldOverlay.swift; sourceTree = "<group>"; };
+		30A21FB4291D2AC0000EF7D4 /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
+		30A21FB6291D2B3E000EF7D4 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		30A21FB8291D2B94000EF7D4 /* TextExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtensions.swift; sourceTree = "<group>"; };
+		30A21FBA291D2BAB000EF7D4 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
+		30A21FBC291D2BB4000EF7D4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		30A21FC0291D3319000EF7D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HorseConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C44592FF27BA547647D81A38 /* Pods-HorseConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorseConnect.debug.xcconfig"; path = "Target Support Files/Pods-HorseConnect/Pods-HorseConnect.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,33 +89,95 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30BB05AD8A596DAF5201755 /* Pods_HorseConnect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		303BD1E5291D422F007E43B3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				303BD1E6291D4239007E43B3 /* HomeView.swift */,
+				3077DA34291E7451002D6607 /* HomeViewState.swift */,
+				3077DA36291E7460002D6607 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		303BD1EA291D689F007E43B3 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				3077DA1C291DC85F002D6607 /* Toolbar */,
+				303BD1EB291D68A5007E43B3 /* Progress */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		303BD1EB291D68A5007E43B3 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				303BD1EC291D68B4007E43B3 /* ProgressView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		3077DA1C291DC85F002D6607 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				3077DA1D291DC85F002D6607 /* ToolbarViewModel.swift */,
+				3077DA1E291DC85F002D6607 /* ToolbarView.swift */,
+				3077DA1F291DC85F002D6607 /* ToolbarViewState.swift */,
+			);
+			path = Toolbar;
+			sourceTree = "<group>";
+		};
+		3077DA27291DF4EF002D6607 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3077DA28291DF4FF002D6607 /* Repository.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3077DA2A291DF916002D6607 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3077DA2D291DF9D2002D6607 /* Extensions */,
+				3077DA2B291DF924002D6607 /* FarmData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3077DA2D291DF9D2002D6607 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3077DA2E291DF9E1002D6607 /* FarmDataExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		30A21F82291D252A000EF7D4 = {
 			isa = PBXGroup;
 			children = (
 				30A21F8D291D252A000EF7D4 /* HorseConnect */,
-				30A21F8C291D252A000EF7D4 /* Products */,
+				79B19AAADF55B0F5B85C1038 /* Pods */,
+				303BD1E9291D5C80007E43B3 /* HorseConnect.app */,
+				66D9A4D30DC36D7D45F2EADD /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		30A21F8C291D252A000EF7D4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				30A21F8B291D252A000EF7D4 /* HorseConnect.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		30A21F8D291D252A000EF7D4 /* HorseConnect */ = {
 			isa = PBXGroup;
 			children = (
+				3077DA2A291DF916002D6607 /* Models */,
+				3077DA27291DF4EF002D6607 /* Network */,
+				30A21FC0291D3319000EF7D4 /* GoogleService-Info.plist */,
+				30A21FAD291D2956000EF7D4 /* Utils */,
+				30A21FA2291D273F000EF7D4 /* Extensions */,
+				30A21F9D291D2582000EF7D4 /* Views */,
 				30A21F8E291D252A000EF7D4 /* HorseConnectApp.swift */,
-				30A21F90291D252A000EF7D4 /* ContentView.swift */,
 				30A21F92291D252B000EF7D4 /* Assets.xcassets */,
 				30A21F94291D252B000EF7D4 /* HorseConnect.entitlements */,
 				30A21F95291D252B000EF7D4 /* Preview Content */,
@@ -69,6 +193,81 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		30A21F9D291D2582000EF7D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				303BD1EA291D689F007E43B3 /* Shared */,
+				303BD1E5291D422F007E43B3 /* Home */,
+				30A21FA8291D2883000EF7D4 /* Login */,
+				30A21FA7291D2878000EF7D4 /* Splash */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		30A21FA2291D273F000EF7D4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				30A21FA3291D274C000EF7D4 /* BindingExtensions.swift */,
+				30A21FAB291D293B000EF7D4 /* ViewExtensions.swift */,
+				30A21FB4291D2AC0000EF7D4 /* ButtonExtensions.swift */,
+				30A21FB6291D2B3E000EF7D4 /* ColorExtensions.swift */,
+				30A21FB8291D2B94000EF7D4 /* TextExtensions.swift */,
+				3077DA30291DFFC8002D6607 /* UIColorEtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30A21FA7291D2878000EF7D4 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				30A21F9E291D2590000EF7D4 /* SplashView.swift */,
+				30A21FA0291D270E000EF7D4 /* SplashViewModel.swift */,
+				30A21FA5291D2760000EF7D4 /* SplashViewState.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		30A21FA8291D2883000EF7D4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				30A21FA9291D2894000EF7D4 /* LoginView.swift */,
+				30A21FBA291D2BAB000EF7D4 /* LoginViewState.swift */,
+				30A21FBC291D2BB4000EF7D4 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		30A21FAD291D2956000EF7D4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				30A21FAE291D2963000EF7D4 /* CornerRadiusStyle.swift */,
+				30A21FB0291D2994000EF7D4 /* OverlayModifier.swift */,
+				30A21FB2291D2A57000EF7D4 /* TextFieldOverlay.swift */,
+				3077DA23291DC8F2002D6607 /* NavigationUtil.swift */,
+				3077DA25291DED06002D6607 /* ImagePicker.swift */,
+				3077DA32291E0366002D6607 /* SingletonUtil.swift */,
+				3077DA38291E8BE8002D6607 /* ColorUtil.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		66D9A4D30DC36D7D45F2EADD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79B19AAADF55B0F5B85C1038 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C44592FF27BA547647D81A38 /* Pods-HorseConnect.debug.xcconfig */,
+				1A4B642B33612C894B67F969 /* Pods-HorseConnect.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,9 +275,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30A21F9A291D252B000EF7D4 /* Build configuration list for PBXNativeTarget "HorseConnect" */;
 			buildPhases = (
+				82312952D7059743EB4D322C /* [CP] Check Pods Manifest.lock */,
 				30A21F87291D252A000EF7D4 /* Sources */,
 				30A21F88291D252A000EF7D4 /* Frameworks */,
 				30A21F89291D252A000EF7D4 /* Resources */,
+				9F63F60B09EDB7C41F6CACAD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -86,7 +287,7 @@
 			);
 			name = HorseConnect;
 			productName = HorseConnect;
-			productReference = 30A21F8B291D252A000EF7D4 /* HorseConnect.app */;
+			productReference = 303BD1E9291D5C80007E43B3 /* HorseConnect.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +306,7 @@
 				};
 			};
 			buildConfigurationList = 30A21F86291D252A000EF7D4 /* Build configuration list for PBXProject "HorseConnect" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -113,7 +314,7 @@
 				Base,
 			);
 			mainGroup = 30A21F82291D252A000EF7D4;
-			productRefGroup = 30A21F8C291D252A000EF7D4 /* Products */;
+			productRefGroup = 30A21F82291D252A000EF7D4;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -128,19 +329,90 @@
 			buildActionMask = 2147483647;
 			files = (
 				30A21F97291D252B000EF7D4 /* Preview Assets.xcassets in Resources */,
+				30A21FC1291D3319000EF7D4 /* GoogleService-Info.plist in Resources */,
 				30A21F93291D252B000EF7D4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		82312952D7059743EB4D322C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HorseConnect-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F63F60B09EDB7C41F6CACAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HorseConnect/Pods-HorseConnect-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HorseConnect/Pods-HorseConnect-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HorseConnect/Pods-HorseConnect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		30A21F87291D252A000EF7D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30A21F91291D252A000EF7D4 /* ContentView.swift in Sources */,
+				3077DA22291DC85F002D6607 /* ToolbarViewState.swift in Sources */,
+				30A21FAA291D2894000EF7D4 /* LoginView.swift in Sources */,
+				30A21FAC291D293B000EF7D4 /* ViewExtensions.swift in Sources */,
+				3077DA39291E8BE8002D6607 /* ColorUtil.swift in Sources */,
+				3077DA35291E7451002D6607 /* HomeViewState.swift in Sources */,
+				3077DA20291DC85F002D6607 /* ToolbarViewModel.swift in Sources */,
+				30A21FA1291D270E000EF7D4 /* SplashViewModel.swift in Sources */,
+				30A21FA4291D274C000EF7D4 /* BindingExtensions.swift in Sources */,
+				30A21FB3291D2A57000EF7D4 /* TextFieldOverlay.swift in Sources */,
+				3077DA26291DED06002D6607 /* ImagePicker.swift in Sources */,
+				30A21FAF291D2963000EF7D4 /* CornerRadiusStyle.swift in Sources */,
+				3077DA2C291DF924002D6607 /* FarmData.swift in Sources */,
+				3077DA29291DF4FF002D6607 /* Repository.swift in Sources */,
+				3077DA24291DC8F2002D6607 /* NavigationUtil.swift in Sources */,
+				303BD1ED291D68B4007E43B3 /* ProgressView.swift in Sources */,
+				30A21FB1291D2994000EF7D4 /* OverlayModifier.swift in Sources */,
+				3077DA37291E7460002D6607 /* HomeViewModel.swift in Sources */,
+				30A21FA6291D2760000EF7D4 /* SplashViewState.swift in Sources */,
+				30A21FBD291D2BB4000EF7D4 /* LoginViewModel.swift in Sources */,
+				30A21FBB291D2BAB000EF7D4 /* LoginViewState.swift in Sources */,
 				30A21F8F291D252A000EF7D4 /* HorseConnectApp.swift in Sources */,
+				3077DA2F291DF9E1002D6607 /* FarmDataExtensions.swift in Sources */,
+				3077DA33291E0366002D6607 /* SingletonUtil.swift in Sources */,
+				30A21FB9291D2B94000EF7D4 /* TextExtensions.swift in Sources */,
+				30A21F9F291D2590000EF7D4 /* SplashView.swift in Sources */,
+				303BD1E7291D4239007E43B3 /* HomeView.swift in Sources */,
+				30A21FB5291D2AC0000EF7D4 /* ButtonExtensions.swift in Sources */,
+				3077DA21291DC85F002D6607 /* ToolbarView.swift in Sources */,
+				3077DA31291DFFC8002D6607 /* UIColorEtensions.swift in Sources */,
+				30A21FB7291D2B3E000EF7D4 /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,6 +522,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -258,6 +532,7 @@
 		};
 		30A21F9B291D252B000EF7D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C44592FF27BA547647D81A38 /* Pods-HorseConnect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -277,9 +552,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -287,7 +561,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.matheusmaxwell.HorseConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -296,6 +572,7 @@
 		};
 		30A21F9C291D252B000EF7D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A4B642B33612C894B67F969 /* Pods-HorseConnect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,9 +592,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -325,7 +601,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.matheusmaxwell.HorseConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
