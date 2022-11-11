@@ -47,29 +47,23 @@ struct HomeView: View {
                     .isHidden(model.state.farmData?.imageLogoUrl != "")
                 Spacer()
                 VStack{
-                    HStack{
-                        cardHome(imagePath: "HorseCardHome", title: "Plantel")
-                            .padding(.trailing, 5)
-                            .padding(.bottom)
-                        cardHome(imagePath: "StationCardHome", title: "Estação")
-                            .padding(.leading, 5)
-                            .padding(.bottom)
-
+                    TabView{
+                        homeViewCards
+                            .tabItem{
+                                Label("Início",systemImage: "house.fill")
+                            }
+                        settingsView
+                            .tabItem{
+                                Label("Configurações",systemImage: "gearshape.fill")
+                            }
                     }
-                    .padding()
-                    HStack{
-                        cardHome(imagePath: "VaccineCardHome", title: "Vacinação")
-                            .padding(.trailing, 5)
-                            .padding(.top)
-                        cardHome(imagePath: "FinanceCardHome", title: "Financeiro")
-                            .padding(.leading, 5)
-                            .padding(.top)
-                    }
+                    .accentColor(ColorUtil.getPrimaryColor(farmData: model.state.farmData))
                 }
                 .frame(maxWidth: .infinity)
                 .frame(height: UIScreen.main.bounds.size.height*0.75)
                 .background(.white)
                 .cornerRadius(12, corners: [.topLeft, .topRight])
+
             }
             .padding(.bottom, -40)
             AppProgressView(show: model.bindings.loading.wrappedValue)
@@ -82,6 +76,29 @@ struct HomeView: View {
             ToolbarView()
         }
         .navigationBarBackButtonHidden(true)
+    }
+    
+    var homeViewCards: some View {
+        VStack{
+            HStack{
+                cardHome(imagePath: "HorseCardHome", title: "Plantel")
+                    .padding(.trailing, 5)
+                    .padding(.bottom)
+                cardHome(imagePath: "StationCardHome", title: "Estação")
+                    .padding(.leading, 5)
+                    .padding(.bottom)
+
+            }
+            .padding()
+            HStack{
+                cardHome(imagePath: "VaccineCardHome", title: "Vacinação")
+                    .padding(.trailing, 5)
+                    .padding(.top)
+                cardHome(imagePath: "FinanceCardHome", title: "Financeiro")
+                    .padding(.leading, 5)
+                    .padding(.top)
+            }
+        }
     }
     
     func cardHome(imagePath: String, title: String) -> some View {
@@ -99,6 +116,15 @@ struct HomeView: View {
         .frame(width: size*0.45, height: size*0.45)
         .background(ColorUtil.getPrimaryColor(farmData: model.state.farmData))
         .cornerRadius(12, corners: [.topLeft, .topRight, .bottomLeft, .bottomRight])
+    }
+    
+    var settingsView: some View {
+        List{
+            Text("Alterar logo")
+            Text("Editar nome da propriedade")
+            Text("Alterar cor")
+            Text("Criar nova senha")
+        }
     }
 }
 
