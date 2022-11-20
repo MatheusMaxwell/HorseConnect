@@ -47,4 +47,24 @@ class Repository: ObservableObject {
             }
         }
     }
+    
+    func addAnimal(animal: Animal, complete: @escaping () -> Void) {
+        let userId = SingletonUtil.shared.userUid
+        store.collection(animalsPath).addDocument(data: animal.toMap()){ error in
+            if let err = error {
+                fatalError("Unable to add farm-data: \(err.localizedDescription).")
+            }
+            complete()
+        }
+    }
+    
+    func updateAnimal(animal: Animal, complete: @escaping () -> Void) {
+        let userId = SingletonUtil.shared.userUid
+        store.collection(animalsPath).document(animal.id ?? "").setData(animal.toMap()){ error in
+            if let err = error {
+                fatalError("Unable to add farm-data: \(err.localizedDescription).")
+            }
+            complete()
+        }
+    }
 }

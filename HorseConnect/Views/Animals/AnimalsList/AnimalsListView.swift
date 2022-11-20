@@ -83,7 +83,7 @@ struct AnimalsListView: View {
                                 .frame(width: 50, height: 50)
                                 VStack(alignment: .leading){
                                     Text(animal.name)
-                                    Text(animal.birthDate)
+                                    Text(animal.birthDate.getDateFromIsoDateString())
                                         .font(.system(size: 15))
                                         .foregroundColor(.black.opacity(0.6))
                                 }

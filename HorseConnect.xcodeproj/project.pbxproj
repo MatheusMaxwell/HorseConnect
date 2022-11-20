@@ -52,6 +52,7 @@
 		30E217132929CC5C006435C2 /* AnimalsRegisterViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E217122929CC5C006435C2 /* AnimalsRegisterViewState.swift */; };
 		30E217152929CC68006435C2 /* AnimalsRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E217142929CC68006435C2 /* AnimalsRegisterViewModel.swift */; };
 		30E217172929DC5A006435C2 /* MultipleSelectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E217162929DC5A006435C2 /* MultipleSelectionRow.swift */; };
+		30E21719292A6E06006435C2 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E21718292A6E06006435C2 /* StringExtensions.swift */; };
 		B30BB05AD8A596DAF5201755 /* Pods_HorseConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		30E217122929CC5C006435C2 /* AnimalsRegisterViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRegisterViewState.swift; sourceTree = "<group>"; };
 		30E217142929CC68006435C2 /* AnimalsRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRegisterViewModel.swift; sourceTree = "<group>"; };
 		30E217162929DC5A006435C2 /* MultipleSelectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionRow.swift; sourceTree = "<group>"; };
+		30E21718292A6E06006435C2 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HorseConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44592FF27BA547647D81A38 /* Pods-HorseConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorseConnect.debug.xcconfig"; path = "Target Support Files/Pods-HorseConnect/Pods-HorseConnect.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -242,6 +244,7 @@
 				30A21FB6291D2B3E000EF7D4 /* ColorExtensions.swift */,
 				30A21FB8291D2B94000EF7D4 /* TextExtensions.swift */,
 				3077DA30291DFFC8002D6607 /* UIColorEtensions.swift */,
+				30E21718292A6E06006435C2 /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				30A21FA4291D274C000EF7D4 /* BindingExtensions.swift in Sources */,
 				30A21FB3291D2A57000EF7D4 /* TextFieldOverlay.swift in Sources */,
 				3077DA26291DED06002D6607 /* ImagePicker.swift in Sources */,
+				30E21719292A6E06006435C2 /* StringExtensions.swift in Sources */,
 				30E216FC29296FF5006435C2 /* SearchView.swift in Sources */,
 				30A21FAF291D2963000EF7D4 /* CornerRadiusStyle.swift in Sources */,
 				3077DA2C291DF924002D6607 /* FarmData.swift in Sources */,

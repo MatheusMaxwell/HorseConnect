@@ -10,6 +10,7 @@ extension Animal {
     func toMap() -> [String:Any]{
         var map = [String:Any]()
         map["name"] = self.name
+        map["imageId"] = self.imageId
         map["imageUrl"] = self.imageUrl
         map["birthDate"] = self.birthDate
         map["coat"] = self.coat
@@ -27,6 +28,7 @@ extension [String:Any]{
         return Animal(
             id: id,
             name: self["name"] as? String ?? "",
+            imageId: self["imageId"] as? String ?? "",
             imageUrl: self["imageUrl"] as? String ?? "",
             birthDate: self["birthDate"] as? String ?? "",
             coat: self["coat"] as? String ?? "",

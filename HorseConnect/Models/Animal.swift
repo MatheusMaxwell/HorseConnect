@@ -6,8 +6,9 @@
 //
 
 struct Animal : Identifiable {
-    var id: String
+    var id: String?
     var name: String
+    var imageId: String?
     var imageUrl: String?
     var birthDate: String
     var coat: String //Pelagem

@@ -11,6 +11,7 @@ struct AnimalsRegisterView: View {
     
     @StateObject private var model = AnimalsRegisterViewModel()
     @State var showSheetTypes = false
+    @Environment(\.dismiss) var dismiss
     
     private let allTypesPossible = [
         AnimalType.stallion.rawValue,
@@ -53,8 +54,14 @@ struct AnimalsRegisterView: View {
                     Toggle("Vivo?", isOn: model.bindings.isLiveAnimal)
                     pickerMultiSelect
                 }
+                .autocapitalization(.none)
+                .autocorrectionDisabled(true)
                 Spacer()
-                Button(action: model.createAnimal) {
+                Button(action: {
+                    self.model.createAnimal() {
+                        self.dismiss()
+                    }
+                }) {
                     Text("SALVAR")
                         .textPrimaryButtonStyle(isEnabled: model.state.canSubmit)
                 }
@@ -87,7 +94,7 @@ struct AnimalsRegisterView: View {
             NavigationView{
                 List(allTypesPossible, id: \.self){ type in
                     MultipleSelectionRow(
-                        title: type,
+                        title: type.toAnimalTypeDescription(),
                         isSelected: self.model.state.types.contains(type)
                     ){
                         model.addOrRemoveItem(type: type)
