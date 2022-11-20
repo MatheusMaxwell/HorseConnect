@@ -40,6 +40,18 @@
 		30A21FBB291D2BAB000EF7D4 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FBA291D2BAB000EF7D4 /* LoginViewState.swift */; };
 		30A21FBD291D2BB4000EF7D4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A21FBC291D2BB4000EF7D4 /* LoginViewModel.swift */; };
 		30A21FC1291D3319000EF7D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30A21FC0291D3319000EF7D4 /* GoogleService-Info.plist */; };
+		30E216F729296A87006435C2 /* AnimalsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E216F629296A87006435C2 /* AnimalsListView.swift */; };
+		30E216F929296CEF006435C2 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E216F829296CEF006435C2 /* Animal.swift */; };
+		30E216FC29296FF5006435C2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E216FB29296FF5006435C2 /* SearchView.swift */; };
+		30E216FF2929748C006435C2 /* AnimalsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E216FE2929748C006435C2 /* AnimalsHomeView.swift */; };
+		30E217022929762F006435C2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E217012929762F006435C2 /* CardView.swift */; };
+		30E217062929A7F3006435C2 /* AnimalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E217052929A7F3006435C2 /* AnimalExtensions.swift */; };
+		30E217082929AB56006435C2 /* AnimalsListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E217072929AB56006435C2 /* AnimalsListViewState.swift */; };
+		30E2170A2929AB60006435C2 /* AnimalsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E217092929AB60006435C2 /* AnimalsListViewModel.swift */; };
+		30E217112929CC3C006435C2 /* AnimalsRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E217102929CC3C006435C2 /* AnimalsRegisterView.swift */; };
+		30E217132929CC5C006435C2 /* AnimalsRegisterViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E217122929CC5C006435C2 /* AnimalsRegisterViewState.swift */; };
+		30E217152929CC68006435C2 /* AnimalsRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E217142929CC68006435C2 /* AnimalsRegisterViewModel.swift */; };
+		30E217172929DC5A006435C2 /* MultipleSelectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E217162929DC5A006435C2 /* MultipleSelectionRow.swift */; };
 		B30BB05AD8A596DAF5201755 /* Pods_HorseConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +92,18 @@
 		30A21FBA291D2BAB000EF7D4 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
 		30A21FBC291D2BB4000EF7D4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		30A21FC0291D3319000EF7D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30E216F629296A87006435C2 /* AnimalsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListView.swift; sourceTree = "<group>"; };
+		30E216F829296CEF006435C2 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		30E216FB29296FF5006435C2 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		30E216FE2929748C006435C2 /* AnimalsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsHomeView.swift; sourceTree = "<group>"; };
+		30E217012929762F006435C2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		30E217052929A7F3006435C2 /* AnimalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalExtensions.swift; sourceTree = "<group>"; };
+		30E217072929AB56006435C2 /* AnimalsListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListViewState.swift; sourceTree = "<group>"; };
+		30E217092929AB60006435C2 /* AnimalsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsListViewModel.swift; sourceTree = "<group>"; };
+		30E217102929CC3C006435C2 /* AnimalsRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRegisterView.swift; sourceTree = "<group>"; };
+		30E217122929CC5C006435C2 /* AnimalsRegisterViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRegisterViewState.swift; sourceTree = "<group>"; };
+		30E217142929CC68006435C2 /* AnimalsRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRegisterViewModel.swift; sourceTree = "<group>"; };
+		30E217162929DC5A006435C2 /* MultipleSelectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionRow.swift; sourceTree = "<group>"; };
 		6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HorseConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44592FF27BA547647D81A38 /* Pods-HorseConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorseConnect.debug.xcconfig"; path = "Target Support Files/Pods-HorseConnect/Pods-HorseConnect.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +133,8 @@
 		303BD1EA291D689F007E43B3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				30E217002929761A006435C2 /* CardView */,
+				30E216FA29296FE5006435C2 /* SearchView */,
 				3077DA1C291DC85F002D6607 /* Toolbar */,
 				303BD1EB291D68A5007E43B3 /* Progress */,
 			);
@@ -146,6 +172,7 @@
 			children = (
 				3077DA2D291DF9D2002D6607 /* Extensions */,
 				3077DA2B291DF924002D6607 /* FarmData.swift */,
+				30E216F829296CEF006435C2 /* Animal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -154,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				3077DA2E291DF9E1002D6607 /* FarmDataExtensions.swift */,
+				30E217052929A7F3006435C2 /* AnimalExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -196,6 +224,7 @@
 		30A21F9D291D2582000EF7D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				30E216F429296A6D006435C2 /* Animals */,
 				303BD1EA291D689F007E43B3 /* Shared */,
 				303BD1E5291D422F007E43B3 /* Home */,
 				30A21FA8291D2883000EF7D4 /* Login */,
@@ -247,8 +276,63 @@
 				3077DA25291DED06002D6607 /* ImagePicker.swift */,
 				3077DA32291E0366002D6607 /* SingletonUtil.swift */,
 				3077DA38291E8BE8002D6607 /* ColorUtil.swift */,
+				30E217162929DC5A006435C2 /* MultipleSelectionRow.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		30E216F429296A6D006435C2 /* Animals */ = {
+			isa = PBXGroup;
+			children = (
+				30E2170F2929CC28006435C2 /* AnimalsRegister */,
+				30E216FD2929747D006435C2 /* AnimalsHome */,
+				30E216F529296A74006435C2 /* AnimalsList */,
+			);
+			path = Animals;
+			sourceTree = "<group>";
+		};
+		30E216F529296A74006435C2 /* AnimalsList */ = {
+			isa = PBXGroup;
+			children = (
+				30E216F629296A87006435C2 /* AnimalsListView.swift */,
+				30E217072929AB56006435C2 /* AnimalsListViewState.swift */,
+				30E217092929AB60006435C2 /* AnimalsListViewModel.swift */,
+			);
+			path = AnimalsList;
+			sourceTree = "<group>";
+		};
+		30E216FA29296FE5006435C2 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				30E216FB29296FF5006435C2 /* SearchView.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		30E216FD2929747D006435C2 /* AnimalsHome */ = {
+			isa = PBXGroup;
+			children = (
+				30E216FE2929748C006435C2 /* AnimalsHomeView.swift */,
+			);
+			path = AnimalsHome;
+			sourceTree = "<group>";
+		};
+		30E217002929761A006435C2 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				30E217012929762F006435C2 /* CardView.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		30E2170F2929CC28006435C2 /* AnimalsRegister */ = {
+			isa = PBXGroup;
+			children = (
+				30E217102929CC3C006435C2 /* AnimalsRegisterView.swift */,
+				30E217122929CC5C006435C2 /* AnimalsRegisterViewState.swift */,
+				30E217142929CC68006435C2 /* AnimalsRegisterViewModel.swift */,
+			);
+			path = AnimalsRegister;
 			sourceTree = "<group>";
 		};
 		66D9A4D30DC36D7D45F2EADD /* Frameworks */ = {
@@ -385,7 +469,9 @@
 			files = (
 				3077DA22291DC85F002D6607 /* ToolbarViewState.swift in Sources */,
 				30A21FAA291D2894000EF7D4 /* LoginView.swift in Sources */,
+				30E217082929AB56006435C2 /* AnimalsListViewState.swift in Sources */,
 				30A21FAC291D293B000EF7D4 /* ViewExtensions.swift in Sources */,
+				30E217112929CC3C006435C2 /* AnimalsRegisterView.swift in Sources */,
 				3077DA39291E8BE8002D6607 /* ColorUtil.swift in Sources */,
 				3077DA35291E7451002D6607 /* HomeViewState.swift in Sources */,
 				3077DA20291DC85F002D6607 /* ToolbarViewModel.swift in Sources */,
@@ -393,26 +479,36 @@
 				30A21FA4291D274C000EF7D4 /* BindingExtensions.swift in Sources */,
 				30A21FB3291D2A57000EF7D4 /* TextFieldOverlay.swift in Sources */,
 				3077DA26291DED06002D6607 /* ImagePicker.swift in Sources */,
+				30E216FC29296FF5006435C2 /* SearchView.swift in Sources */,
 				30A21FAF291D2963000EF7D4 /* CornerRadiusStyle.swift in Sources */,
 				3077DA2C291DF924002D6607 /* FarmData.swift in Sources */,
 				3077DA29291DF4FF002D6607 /* Repository.swift in Sources */,
+				30E217022929762F006435C2 /* CardView.swift in Sources */,
 				3077DA24291DC8F2002D6607 /* NavigationUtil.swift in Sources */,
 				303BD1ED291D68B4007E43B3 /* ProgressView.swift in Sources */,
 				30A21FB1291D2994000EF7D4 /* OverlayModifier.swift in Sources */,
+				30E216FF2929748C006435C2 /* AnimalsHomeView.swift in Sources */,
+				30E2170A2929AB60006435C2 /* AnimalsListViewModel.swift in Sources */,
 				3077DA37291E7460002D6607 /* HomeViewModel.swift in Sources */,
 				30A21FA6291D2760000EF7D4 /* SplashViewState.swift in Sources */,
 				30A21FBD291D2BB4000EF7D4 /* LoginViewModel.swift in Sources */,
+				30E217172929DC5A006435C2 /* MultipleSelectionRow.swift in Sources */,
 				30A21FBB291D2BAB000EF7D4 /* LoginViewState.swift in Sources */,
 				30A21F8F291D252A000EF7D4 /* HorseConnectApp.swift in Sources */,
 				3077DA2F291DF9E1002D6607 /* FarmDataExtensions.swift in Sources */,
 				3077DA33291E0366002D6607 /* SingletonUtil.swift in Sources */,
 				30A21FB9291D2B94000EF7D4 /* TextExtensions.swift in Sources */,
 				30A21F9F291D2590000EF7D4 /* SplashView.swift in Sources */,
+				30E217132929CC5C006435C2 /* AnimalsRegisterViewState.swift in Sources */,
+				30E216F929296CEF006435C2 /* Animal.swift in Sources */,
 				303BD1E7291D4239007E43B3 /* HomeView.swift in Sources */,
 				30A21FB5291D2AC0000EF7D4 /* ButtonExtensions.swift in Sources */,
+				30E216F729296A87006435C2 /* AnimalsListView.swift in Sources */,
 				3077DA21291DC85F002D6607 /* ToolbarView.swift in Sources */,
 				3077DA31291DFFC8002D6607 /* UIColorEtensions.swift in Sources */,
 				30A21FB7291D2B3E000EF7D4 /* ColorExtensions.swift in Sources */,
+				30E217062929A7F3006435C2 /* AnimalExtensions.swift in Sources */,
+				30E217152929CC68006435C2 /* AnimalsRegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

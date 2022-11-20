@@ -9,7 +9,7 @@ import SwiftUI
 
 extension Button {
     
-    func primaryButtonStyle(isEnabled: Bool, color: Color = .primaryColor) -> some View {
+    func primaryButtonStyle(isEnabled: Bool, color: Color = ColorUtil.getPrimaryColor(farmData: SingletonUtil.shared.farmData)) -> some View {
         self
             .buttonStyle(.bordered)
             .background(RoundedRectangle(cornerRadius: 4)

@@ -26,5 +26,4 @@ extension [String:Any]{
             primaryColor: self["primaryColor"] as? String ?? ""
         )
     }
-    
 }

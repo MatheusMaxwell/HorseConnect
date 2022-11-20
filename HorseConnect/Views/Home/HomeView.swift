@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var model = HomeViewModel()
+    @State var navigateToAnimalsHome = false
+
     
     init() {
         URLCache.shared.memoryCapacity = 10_000_000 // ~10 MB memory space
@@ -67,6 +69,11 @@ struct HomeView: View {
             }
             .padding(.bottom, -40)
             AppProgressView(show: model.bindings.loading.wrappedValue)
+            NavigationLink(
+                destination: AnimalsHomeView(),
+                isActive: $navigateToAnimalsHome,
+                label: {}
+            )
         }
         .onAppear{
             model.getFarmData(userId: SingletonUtil.shared.userUid)
@@ -81,41 +88,32 @@ struct HomeView: View {
     var homeViewCards: some View {
         VStack{
             HStack{
-                cardHome(imagePath: "HorseCardHome", title: "Plantel")
+                CardView(imagePath: "HorseCardHome", title: "Plantel", farmData: model.state.farmData){
+                    navigateToAnimalsHome.toggle()
+                }
                     .padding(.trailing, 5)
                     .padding(.bottom)
-                cardHome(imagePath: "StationCardHome", title: "Estação")
+                CardView(imagePath: "StationCardHome", title: "Estação", farmData: model.state.farmData){
+                    
+                }
                     .padding(.leading, 5)
                     .padding(.bottom)
 
             }
             .padding()
             HStack{
-                cardHome(imagePath: "VaccineCardHome", title: "Vacinação")
+                CardView(imagePath: "VaccineCardHome", title: "Vacinação", farmData: model.state.farmData){
+                    
+                }
                     .padding(.trailing, 5)
                     .padding(.top)
-                cardHome(imagePath: "FinanceCardHome", title: "Financeiro")
+                CardView(imagePath: "FinanceCardHome", title: "Financeiro", farmData: model.state.farmData){
+                    
+                }
                     .padding(.leading, 5)
                     .padding(.top)
             }
         }
-    }
-    
-    func cardHome(imagePath: String, title: String) -> some View {
-        let size = UIScreen.main.bounds.size.width
-        return VStack{
-            Image(imagePath)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: size*0.3, height: size*0.3)
-            Text(title)
-                .font(.system(size: 30))
-                .padding(.bottom, 8)
-                .foregroundColor(.white)
-        }
-        .frame(width: size*0.45, height: size*0.45)
-        .background(ColorUtil.getPrimaryColor(farmData: model.state.farmData))
-        .cornerRadius(12, corners: [.topLeft, .topRight, .bottomLeft, .bottomRight])
     }
     
     var settingsView: some View {

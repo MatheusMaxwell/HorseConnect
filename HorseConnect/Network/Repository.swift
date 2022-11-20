@@ -11,6 +11,7 @@ import Combine
 // 2
 class Repository: ObservableObject {
     private let farmDataPath: String = "farms-data"
+    private let animalsPath: String = "animals"
     private let store = Firestore.firestore()
     
     func addFarmData(farmData: FarmData, userId: String, complete: @escaping () -> Void) {
@@ -28,6 +29,21 @@ class Repository: ObservableObject {
                 complete(document.data()?.toFarmData() ?? nil)
             } else {
                 complete(nil)
+            }
+        }
+    }
+    
+    func getAnimals(userId: String, complete: @escaping ([Animal]?) -> Void){
+        store.collection(animalsPath).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                complete(nil)
+            } else {
+                var animals = [Animal]()
+                for document in querySnapshot!.documents {
+                    animals.append(document.data().toAnimal(id: document.documentID))
+                }
+                complete(animals)
             }
         }
     }

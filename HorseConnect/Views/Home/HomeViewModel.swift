@@ -53,6 +53,7 @@ final class HomeViewModel: ObservableObject{
         DispatchQueue.main.async {
             self.repository.getFarmData(userId: userId){ farmData in
                 if farmData != nil {
+                    SingletonUtil.shared.farmData = farmData
                     self.state.farmName = farmData?.farmName ?? ""
                     self.state.colorSelected = Color(hex: farmData?.primaryColor ?? "") ?? Color.primaryColor
                     self.state.farmData = farmData
