@@ -80,6 +80,7 @@ struct AnimalsListView: View {
                 
             }
             .onAppear{
+                SingletonUtil.shared.animal = nil
                 model.getAnimalsByType(animalType: animalType)
             }
             AppProgressView(show: model.state.loading)

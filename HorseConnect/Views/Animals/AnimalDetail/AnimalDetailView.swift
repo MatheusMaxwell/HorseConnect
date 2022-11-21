@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnimalDetailView: View {
     
-    var animal: Animal
+    @State var animal: Animal
     @State var navigateToAnimalRegisterView = false
     
     var body: some View {
@@ -43,6 +43,11 @@ struct AnimalDetailView: View {
                 isActive: $navigateToAnimalRegisterView,
                 label: {}
             )
+        }
+        .onAppear{
+            if let anim = SingletonUtil.shared.animal {
+                self.animal = anim
+            }
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)

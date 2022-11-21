@@ -60,9 +60,17 @@ struct AnimalsRegisterView: View {
                 .autocorrectionDisabled(true)
                 Spacer()
                 Button(action: {
-                    self.model.createAnimal {
-                        self.dismiss()
+                    if(SingletonUtil.shared.animal != nil){
+                        self.model.updateAnimal {
+                            self.dismiss()
+                        }
                     }
+                    else{
+                        self.model.createAnimal {
+                            self.dismiss()
+                        }
+                    }
+                    
                 }) {
                     Text("SALVAR")
                         .textPrimaryButtonStyle(isEnabled: model.state.canSubmit)

@@ -56,12 +56,53 @@ class AnimalsRegisterViewModel: ObservableObject {
         }
     }
     
+    func updateAnimal(complete: @escaping () -> Void){
+        self.state.loading = true
+        self.updateImage(imageId: SingletonUtil.shared.animal?.imageId ?? "") { imageId, url in
+            let userId = SingletonUtil.shared.userUid
+            let animal = Animal(id: SingletonUtil.shared.animal?.id, name: self.state.animalName, imageId: imageId, imageUrl: url, birthDate: self.state.birthDateAnimal.ISO8601Format(), coat: self.state.coatAnimal, sex: self.state.sexAnimal, isLive: self.state.isLiveAnimal, types: self.state.types, userId: userId)
+            DispatchQueue.main.async {
+                self.repository.updateAnimal(animal: animal){
+                    self.state.loading = false
+                    SingletonUtil.shared.animal = animal
+                    complete()
+                }
+            }
+        }
+    }
     
     func addOrRemoveItem(type: String){
         if self.state.types.contains(type) {
             self.state.types.removeAll(where: { $0 == type })
         } else {
             self.state.types.append(type)
+        }
+    }
+    
+    func updateImage(imageId: String, complete: @escaping (_ imageId: String, _ url: String ) -> Void){
+        DispatchQueue.main.async {
+            let childRef = self.storage.reference().child("animals/" + imageId + ".png")
+            if let data = self.state.imageSelected?.pngData() {
+                _ = childRef.putData(data, metadata: nil) { (metadata, error) in
+                    guard let metadata = metadata else {
+                        complete("", "")
+                        return
+                    }
+                    _ = metadata.size
+                    childRef.downloadURL { (url, error) in
+                        guard url != nil else {
+                            complete("", "")
+                            return
+                        }
+                        
+                        complete(imageId, url?.description ?? "")
+                    }
+                }
+            }
+            else{
+                complete("", "")
+            }
+            
         }
     }
     
