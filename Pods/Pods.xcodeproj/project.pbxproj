@@ -1227,6 +1227,7 @@
 		30D243EA5A6587EB8217D083D2325FC4 /* bad_optional_access.h in Headers */ = {isa = PBXBuildFile; fileRef = 2539855F1FD7E243F1943872BADEB900 /* bad_optional_access.h */; };
 		30D90E70EBF845BC5A015DD7711540B6 /* GTMSessionFetcher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3C5081FFA40D9B987AAA4B6C483A4D /* GTMSessionFetcher-dummy.m */; };
 		30E215D63B55474953EC0C30E277178B /* channel_arguments.h in Headers */ = {isa = PBXBuildFile; fileRef = 0768465DFCE4B805D7A6F94BBAE67F46 /* channel_arguments.h */; };
+		30E2171C292BE576006435C2 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 30E2171B292BE576006435C2 /* CachedAsyncImage */; };
 		30E2FB74DF2FEE0A6458561A5CBA54FC /* alts_record_protocol_crypter_common.h in Copy src/core/tsi/alts/frame_protector Private Headers */ = {isa = PBXBuildFile; fileRef = 3FC40BA6E9DFF2E5495BEFC183E07BBF /* alts_record_protocol_crypter_common.h */; };
 		30E4E5BB55DD3A1AF7748E039FFDD4FB /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75025A8A27096CDB6E8AE8E4BC9FFA5C /* SafariServices.framework */; };
 		30E7014715800A2FFE511D5AEDA346E9 /* FIRComponentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 3284F38BED03D0F92D4B32BC6EB8E19F /* FIRComponentType.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17179,6 +17180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2208F3EDE738D3FF27F47F3CD1C3CC28 /* Foundation.framework in Frameworks */,
+				30E2171C292BE576006435C2 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -26549,6 +26551,9 @@
 			dependencies = (
 			);
 			name = abseil;
+			packageProductDependencies = (
+				30E2171B292BE576006435C2 /* CachedAsyncImage */,
+			);
 			productName = absl;
 			productReference = BF96B57ADE05E8909F823BDF6868B3E3 /* abseil */;
 			productType = "com.apple.product-type.framework";
@@ -26763,6 +26768,9 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			packageReferences = (
+				30E2171A292BE576006435C2 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = 04EF0BB22EDAA191CEE050B4FEA36CC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -31583,6 +31591,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		30E2171A292BE576006435C2 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30E2171B292BE576006435C2 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30E2171A292BE576006435C2 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

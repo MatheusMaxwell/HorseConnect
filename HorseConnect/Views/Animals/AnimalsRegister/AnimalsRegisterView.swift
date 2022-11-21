@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct AnimalsRegisterView: View {
     
     @StateObject private var model = AnimalsRegisterViewModel()
     @State var showSheetTypes = false
     @Environment(\.dismiss) var dismiss
+    
+//    init(animal: Animal? = nil) {
+//        self.model.setAnimal(animal: animal)
+//    }
     
     private let allTypesPossible = [
         AnimalType.stallion.rawValue,
@@ -28,12 +33,9 @@ struct AnimalsRegisterView: View {
             VStack{
                 Form{
                     VStack(alignment: .center){
-                        image
-                        .background(Color.gray.opacity(0.3))
-                        .cornerRadius(12, corners: [.allCorners])
-                        .padding(.top, 20)
+                        CachedImageView(imageUrl: model.state.animalImageUrl, width: UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.width*0.5, imageSelected: model.bindings.imageSelected.wrappedValue)
                         Button("Adicionar imagem", action: {
-                            model.bindings.showGalleryToSelectImage.wrappedValue.toggle()
+                            model.openGallery()
                         })
                         .padding(.leading)
                         .padding(.top)
@@ -70,7 +72,9 @@ struct AnimalsRegisterView: View {
             }
             AppProgressView(show: model.state.loading)
         }
-        
+        .onAppear{
+            model.getAnimalValues()
+        }
         
     }
     
@@ -118,41 +122,6 @@ struct AnimalsRegisterView: View {
             }
             .navigationViewStyle(.stack)
         }
-    }
-    
-    @ViewBuilder
-    var image: some View {
-//        if model.bindings.imageSelected.wrappedValue.pngData() != nil{
-//            Image(uiImage: model.bindings.imageSelected.wrappedValue)
-//                .resizable()
-//                .frame(maxWidth: .infinity, maxHeight: .infinity)
-//                .aspectRatio(contentMode: .fit)
-//        }
-//        else{
-            AsyncImage(
-                url: URL(string: model.state.animalImageUrl),
-                content: { image in
-                    image
-                        .resizable()
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .aspectRatio(contentMode: .fit)
-
-                },
-                placeholder: {
-                    Image(uiImage: model.bindings.imageSelected.wrappedValue)
-                        .resizable()
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .aspectRatio(contentMode: .fit)
-//                    VStack{
-//
-//                    }
-//                    .background(Color.gray.opacity(0.3))
-//                    .cornerRadius(12, corners: [.allCorners])
-//                    .padding(.top, 20)
-//                    .frame(width: UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height*0.2)
-                }
-            )
-//        }
     }
 
 }

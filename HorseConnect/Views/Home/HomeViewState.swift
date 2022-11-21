@@ -15,7 +15,7 @@ struct HomeViewState {
     var messageError = ""
     var showSheetEdit = false
     var editTypeEnum = EditType.LOGO
-    var selectedImage = UIImage()
+    var selectedImage: UIImage? = nil
     var showGalleryToSelectImage = false
     var farmName = ""
     var colorSelected = Color.primaryColor

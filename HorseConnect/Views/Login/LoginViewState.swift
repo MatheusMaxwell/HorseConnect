@@ -19,7 +19,7 @@ struct LoginViewState {
     var showBottomSheetCreateUser = false
     var colorSelected = Color.primaryColor
     var callSheetImage = false
-    var imageLogoSelected = UIImage()
+    var imageLogoSelected: UIImage? = nil
 }
 
 extension LoginViewState {

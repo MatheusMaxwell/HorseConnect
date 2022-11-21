@@ -108,13 +108,21 @@ struct LoginView: View {
                     ColorPicker("Cor principal", selection: model.bindings.colorSelected)
                         .padding(.top, 20)
                     HStack{
-                        Image(uiImage: model.bindings.imageLogoSelected.wrappedValue)
-                            .resizable()
-                            .frame(width: 100, height: 100)
-                            .background(Color.black.opacity(0.2))
-                            .aspectRatio(contentMode: .fill)
-                            .clipShape(Rectangle())
-                            .cornerRadius(10)
+                        if model.bindings.imageLogoSelected.wrappedValue != nil {
+                            Image(uiImage: model.bindings.imageLogoSelected.wrappedValue!)
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                                .background(Color.black.opacity(0.2))
+                                .aspectRatio(contentMode: .fill)
+                                .clipShape(Rectangle())
+                                .cornerRadius(10)
+                        }
+                        else{
+                            Rectangle()
+                                .foregroundColor(Color.black.opacity(0.2))
+                                .cornerRadius(10)
+                                .frame(width: 100, height: 100)
+                        }
                         
                         Button(action: model.callSheetImage) {
                             Text("Inserir logo")

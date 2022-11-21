@@ -15,5 +15,6 @@ class SingletonUtil{
     
     var userUid : String = ""
     var farmData: FarmData? = nil
+    var animal: Animal? = nil
 
 }

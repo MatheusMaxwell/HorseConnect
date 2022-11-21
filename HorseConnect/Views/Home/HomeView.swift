@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct HomeView: View {
     @StateObject private var model = HomeViewModel()
@@ -27,7 +28,7 @@ struct HomeView: View {
                 Spacer()
                 
                 if model.state.farmData != nil && !model.state.farmData!.imageLogoUrl.isEmpty {
-                    AsyncImage(
+                    CachedAsyncImage(
                         url: URL(string: model.state.farmData!.imageLogoUrl),
                         content: { image in
                             image
@@ -188,14 +189,14 @@ struct HomeView: View {
     
     @ViewBuilder
     var image: some View {
-        if model.bindings.selectedImage.wrappedValue.pngData() != nil {
-            Image(uiImage: model.bindings.selectedImage.wrappedValue)
+        if model.bindings.selectedImage.wrappedValue?.pngData() != nil {
+            Image(uiImage: model.bindings.selectedImage.wrappedValue!)
                 .resizable()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .aspectRatio(contentMode: .fit)
         }
         else{
-            AsyncImage(
+            CachedAsyncImage(
                 url: URL(string: model.state.farmData!.imageLogoUrl),
                 content: { image in
                     image

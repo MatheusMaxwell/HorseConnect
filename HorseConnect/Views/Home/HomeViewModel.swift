@@ -26,7 +26,7 @@ final class HomeViewModel: ObservableObject{
             showError: Binding<Bool>,
             loading: Binding<Bool>,
             showSheetEdit: Binding<Bool>,
-            selectedImage: Binding<UIImage>,
+            selectedImage: Binding<UIImage?>,
             showGalleryToSelectImage: Binding<Bool>,
             farmName: Binding<String>,
             colorSelected: Binding<Color>,
@@ -77,7 +77,7 @@ final class HomeViewModel: ObservableObject{
         self.state.loading = true
         DispatchQueue.main.async {
             let childRef = self.storage.reference().child("logos/" + SingletonUtil.shared.userUid + ".png")
-            if let data = self.state.selectedImage.pngData() {
+            if let data = self.state.selectedImage?.pngData() {
                 _ = childRef.putData(data, metadata: nil) { (metadata, error) in
                     guard let metadata = metadata else {
                         self.state.loading = false

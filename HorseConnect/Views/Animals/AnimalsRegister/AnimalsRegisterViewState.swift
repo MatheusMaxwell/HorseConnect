@@ -18,7 +18,7 @@ struct AnimalsRegisterViewState {
     var isLiveAnimal = true
     var types = [String]()
     var loading = false
-    var imageSelected = UIImage()
+    var imageSelected: UIImage? = nil
     var showGalleryToSelectImage = false
 }
 

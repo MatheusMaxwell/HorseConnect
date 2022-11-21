@@ -25,7 +25,7 @@ class AnimalsRegisterViewModel: ObservableObject {
         isLiveAnimal: Binding<Bool>,
         types: Binding<[String]>,
         loading: Binding<Bool>,
-        imageSelected: Binding<UIImage>,
+        imageSelected: Binding<UIImage?>,
         showGalleryToSelectImage: Binding<Bool>
     ) {
         (
@@ -69,7 +69,7 @@ class AnimalsRegisterViewModel: ObservableObject {
         let imageId = UUID().uuidString
         DispatchQueue.main.async {
             let childRef = self.storage.reference().child("animals/" + imageId + ".png")
-            if let data = self.state.imageSelected.pngData() {
+            if let data = self.state.imageSelected?.pngData() {
                 _ = childRef.putData(data, metadata: nil) { (metadata, error) in
                     guard let metadata = metadata else {
                         complete("", "")
@@ -91,5 +91,27 @@ class AnimalsRegisterViewModel: ObservableObject {
             }
             
         }
+    }
+    
+//    func setAnimal(animal: Animal?){
+//        if let anim = animal {
+//            self.state.animal = anim
+//        }
+//    }
+    
+    func getAnimalValues(){
+        if let animal = SingletonUtil.shared.animal {
+            self.state.animalName = animal.name
+            self.state.animalImageUrl = animal.imageUrl ?? ""
+            self.state.birthDateAnimal = ISO8601DateFormatter().date(from: animal.birthDate) ?? Date()
+            self.state.coatAnimal = animal.coat
+            self.state.sexAnimal = animal.sex
+            self.state.isLiveAnimal = animal.isLive
+            self.state.types = animal.types ?? []
+        }
+    }
+
+    func openGallery(){
+        self.state.showGalleryToSelectImage.toggle()
     }
 }

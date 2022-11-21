@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct AnimalsListView: View {
     @StateObject private var model = AnimalListViewModel()
@@ -39,6 +40,7 @@ struct AnimalsListView: View {
                     
                 }
                 Button("+ Novo", action: {
+                    SingletonUtil.shared.animal = nil
                     navigateToAnimalsRegister.toggle()
                 })
                 .padding(.trailing)
@@ -58,36 +60,19 @@ struct AnimalsListView: View {
                 else{
                     List{
                         ForEach(model.state.animals) { animal in
-                            HStack{
-                                AsyncImage(
-                                    url: URL(string: animal.imageUrl ?? ""),
-                                    content: { image in
-                                        image
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-
-                                    },
-                                    placeholder: {
-                                        VStack{
-                                            
+                            NavigationLink(destination: AnimalDetailView(animal: animal)
+                                .navigationViewStyle(.stack)) {
+                                    HStack{
+                                        CachedImageView(imageUrl: animal.imageUrl ?? "", width: 50, height: 50)
+                                        VStack(alignment: .leading){
+                                            Text(animal.name)
+                                            Text(animal.birthDate.getDateFromIsoDateString())
+                                                .font(.system(size: 15))
+                                                .foregroundColor(.black.opacity(0.6))
                                         }
-                                        .background(Color.gray)
-                                        .cornerRadius(12, corners: [.allCorners])
-                                        .padding(.top, 20)
-                                        .frame(width: 50, height: 50)
                                     }
-                                )
-                                .background(Color.gray.opacity(0.2))
-                                .cornerRadius(12, corners: [.allCorners])
-                                .padding()
-                                .frame(width: 50, height: 50)
-                                VStack(alignment: .leading){
-                                    Text(animal.name)
-                                    Text(animal.birthDate.getDateFromIsoDateString())
-                                        .font(.system(size: 15))
-                                        .foregroundColor(.black.opacity(0.6))
-                                }
                             }
+                            
                         }
                     }
                     .listStyle(.plain)

@@ -27,7 +27,7 @@ final class LoginViewModel: ObservableObject {
             showBottomSheetCreateUser: Binding<Bool>,
             colorSelected: Binding<Color>,
             callSheetImage: Binding<Bool>,
-            imageLogoSelected: Binding<UIImage>
+            imageLogoSelected: Binding<UIImage?>
         ) {
             (
                 email: Binding(to: \.state.email, on: self),
@@ -90,7 +90,7 @@ final class LoginViewModel: ObservableObject {
     func uploadLogo(complete: @escaping (String) -> Void){
         DispatchQueue.main.async {
             let childRef = self.storage.reference().child("logos/" + SingletonUtil.shared.userUid + ".png")
-            if let data = self.state.imageLogoSelected.pngData() {
+            if let data = self.state.imageLogoSelected?.pngData() {
                 _ = childRef.putData(data, metadata: nil) { (metadata, error) in
                     guard let metadata = metadata else {
                         complete("")

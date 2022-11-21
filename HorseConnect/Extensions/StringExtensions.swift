@@ -34,6 +34,6 @@ extension String {
         let newFormatter = ISO8601DateFormatter()
         let date = newFormatter.date(from: self)
         
-        return date?.formatted().components(separatedBy: " ")[0] ?? ""
+        return date?.formatted().components(separatedBy: " ")[0].replacingOccurrences(of: ",", with: "") ?? ""
     }
 }
