@@ -104,7 +104,9 @@ struct AnimalsHomeView: View {
             }
             .sheet(isPresented: $navigateToAnimalsList){
                 NavigationView{
-                    AnimalsListView(animalType: animalType)
+                    if let type = animalType {
+                        AnimalsListView(animalType: type)
+                    }
                 }
                 .navigationViewStyle(.stack)
             } 

@@ -58,7 +58,7 @@ struct AnimalsRegisterView: View {
                 .autocorrectionDisabled(true)
                 Spacer()
                 Button(action: {
-                    self.model.createAnimal() {
+                    self.model.createAnimal {
                         self.dismiss()
                     }
                 }) {
@@ -122,13 +122,13 @@ struct AnimalsRegisterView: View {
     
     @ViewBuilder
     var image: some View {
-        if model.bindings.imageSelected.wrappedValue.pngData() != nil {
-            Image(uiImage: model.bindings.imageSelected.wrappedValue)
-                .resizable()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .aspectRatio(contentMode: .fit)
-        }
-        else{
+//        if model.bindings.imageSelected.wrappedValue.pngData() != nil{
+//            Image(uiImage: model.bindings.imageSelected.wrappedValue)
+//                .resizable()
+//                .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                .aspectRatio(contentMode: .fit)
+//        }
+//        else{
             AsyncImage(
                 url: URL(string: model.state.animalImageUrl),
                 content: { image in
@@ -139,16 +139,20 @@ struct AnimalsRegisterView: View {
 
                 },
                 placeholder: {
-                    VStack{
-                        
-                    }
-                    .background(Color.gray.opacity(0.3))
-                    .cornerRadius(12, corners: [.allCorners])
-                    .padding(.top, 20)
-                    .frame(width: UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height*0.2)
+                    Image(uiImage: model.bindings.imageSelected.wrappedValue)
+                        .resizable()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .aspectRatio(contentMode: .fit)
+//                    VStack{
+//
+//                    }
+//                    .background(Color.gray.opacity(0.3))
+//                    .cornerRadius(12, corners: [.allCorners])
+//                    .padding(.top, 20)
+//                    .frame(width: UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height*0.2)
                 }
             )
-        }
+//        }
     }
 
 }

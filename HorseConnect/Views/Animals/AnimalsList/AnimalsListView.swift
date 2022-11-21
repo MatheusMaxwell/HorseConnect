@@ -14,9 +14,9 @@ struct AnimalsListView: View {
     
     @State var navigateToAnimalsRegister = false
     
-    var animalType: AnimalType? = nil
+    var animalType: AnimalType
     
-    init(animalType: AnimalType?){
+    init(animalType: AnimalType){
         self.animalType = animalType
     }
     
@@ -95,9 +95,7 @@ struct AnimalsListView: View {
                 
             }
             .onAppear{
-                if let type = animalType {
-                    model.getAnimalsByType(animalType: type)
-                }
+                model.getAnimalsByType(animalType: animalType)
             }
             AppProgressView(show: model.state.loading)
         }
