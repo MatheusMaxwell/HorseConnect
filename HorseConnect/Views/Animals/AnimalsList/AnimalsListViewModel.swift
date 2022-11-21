@@ -31,8 +31,7 @@ class AnimalListViewModel: ObservableObject {
     func getAnimalsByType(animalType: AnimalType){
         self.state.loading = true
         DispatchQueue.main.async {
-            let userId = SingletonUtil.shared.userUid
-            self.repository.getAnimals(userId: userId){ animalsRepository in
+            self.repository.getAnimals(){ animalsRepository in
                 if let animals = animalsRepository {
                     self.state.animals = animals.filter{ $0.types?.contains(animalType.rawValue) ?? false}
                     self.state.loading = false

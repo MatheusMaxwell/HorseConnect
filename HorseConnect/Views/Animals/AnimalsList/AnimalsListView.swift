@@ -14,9 +14,9 @@ struct AnimalsListView: View {
     
     @State var navigateToAnimalsRegister = false
     
-    var animalType = AnimalType.stallion
+    var animalType: AnimalType? = nil
     
-    init(animalType: AnimalType){
+    init(animalType: AnimalType?){
         self.animalType = animalType
     }
     
@@ -95,16 +95,19 @@ struct AnimalsListView: View {
                 
             }
             .onAppear{
-                model.getAnimalsByType(animalType: self.animalType)
+                if let type = animalType {
+                    model.getAnimalsByType(animalType: type)
+                }
             }
             AppProgressView(show: model.state.loading)
         }
        
     }
     
-    private func getTitle(animalType: AnimalType) -> String{
+    private func getTitle(animalType: AnimalType?) -> String{
         switch(animalType){
-            case AnimalType.stallion: return "Garanhões"
+        case .stallion:
+            return "Garanhões"
         case .donor:
             return "Doadoras/Matrizes"
         case .foal:
@@ -117,6 +120,8 @@ struct AnimalsListView: View {
             return "Castrados"
         case .receivers:
             return "Receptoras"
+        case .none:
+            return ""
         }
     }
 }

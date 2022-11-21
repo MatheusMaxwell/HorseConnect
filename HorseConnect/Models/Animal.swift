@@ -15,6 +15,7 @@ struct Animal : Identifiable {
     var sex: String
     var isLive: Bool
     var types: [String]?
+    var userId: String
 }
 
 enum AnimalType: String {

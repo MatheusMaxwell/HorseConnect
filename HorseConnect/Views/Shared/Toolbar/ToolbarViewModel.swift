@@ -24,6 +24,8 @@ final class ToolbarViewModel: ObservableObject {
     func logout(){
         do{
             try auth.signOut()
+            SingletonUtil.shared.farmData = nil
+            SingletonUtil.shared.userUid = ""
             NavigationUtil.popToRootView()
         }catch let error as NSError {
             print(error)

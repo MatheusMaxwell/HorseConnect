@@ -17,7 +17,7 @@ extension Animal {
         map["sex"] = self.sex
         map["isLive"] = self.isLive
         map["types"] = self.types?.joined(separator: ",")
-        
+        map["userId"] = self.userId
         return map
     }
 }
@@ -34,7 +34,8 @@ extension [String:Any]{
             coat: self["coat"] as? String ?? "",
             sex: self["sex"] as? String ?? "",
             isLive: self["isLive"] as? Bool ?? true,
-            types: (self["types"] as? String ?? "").components(separatedBy: ",")
+            types: (self["types"] as? String ?? "").components(separatedBy: ","),
+            userId: self["userId"] as? String ?? ""
         )
     }
     

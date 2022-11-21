@@ -33,8 +33,9 @@ class Repository: ObservableObject {
         }
     }
     
-    func getAnimals(userId: String, complete: @escaping ([Animal]?) -> Void){
-        store.collection(animalsPath).getDocuments() { (querySnapshot, err) in
+    func getAnimals(complete: @escaping ([Animal]?) -> Void){
+        let userId = SingletonUtil.shared.userUid
+        store.collection(animalsPath).whereField("userId", isEqualTo: userId).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
                 complete(nil)
@@ -49,7 +50,6 @@ class Repository: ObservableObject {
     }
     
     func addAnimal(animal: Animal, complete: @escaping () -> Void) {
-        let userId = SingletonUtil.shared.userUid
         store.collection(animalsPath).addDocument(data: animal.toMap()){ error in
             if let err = error {
                 fatalError("Unable to add farm-data: \(err.localizedDescription).")
@@ -59,7 +59,6 @@ class Repository: ObservableObject {
     }
     
     func updateAnimal(animal: Animal, complete: @escaping () -> Void) {
-        let userId = SingletonUtil.shared.userUid
         store.collection(animalsPath).document(animal.id ?? "").setData(animal.toMap()){ error in
             if let err = error {
                 fatalError("Unable to add farm-data: \(err.localizedDescription).")

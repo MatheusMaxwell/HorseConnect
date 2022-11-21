@@ -12,7 +12,7 @@ struct AnimalsHomeView: View {
     @Environment(\.dismiss) var dismiss
     private var farmData: FarmData? = nil
     @State var navigateToAnimalsList = false
-    @State var animalType = AnimalType.stallion
+    @State var animalType: AnimalType? = nil
     
     init(){
         farmData = SingletonUtil.shared.farmData

@@ -45,7 +45,8 @@ class AnimalsRegisterViewModel: ObservableObject {
     func createAnimal(complete: @escaping () -> Void){
         self.state.loading = true
         self.uploadImage { imageId, url in
-            let animal = Animal(name: self.state.animalName, imageId: imageId, imageUrl: url, birthDate: self.state.birthDateAnimal.ISO8601Format(), coat: self.state.coatAnimal, sex: self.state.sexAnimal, isLive: self.state.isLiveAnimal, types: self.state.types)
+            let userId = SingletonUtil.shared.userUid
+            let animal = Animal(name: self.state.animalName, imageId: imageId, imageUrl: url, birthDate: self.state.birthDateAnimal.ISO8601Format(), coat: self.state.coatAnimal, sex: self.state.sexAnimal, isLive: self.state.isLiveAnimal, types: self.state.types, userId: userId)
             DispatchQueue.main.async {
                 self.repository.addAnimal(animal: animal){
                     self.state.loading = false
