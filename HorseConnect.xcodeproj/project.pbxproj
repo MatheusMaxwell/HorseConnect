@@ -55,6 +55,11 @@
 		30E21719292A6E06006435C2 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E21718292A6E06006435C2 /* StringExtensions.swift */; };
 		30E2171F292BFFCE006435C2 /* AnimalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E2171E292BFFCE006435C2 /* AnimalDetailView.swift */; };
 		30E21722292C0072006435C2 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E21721292C0072006435C2 /* CachedImageView.swift */; };
+		30FD3B90292D012C00ABCE8E /* AnimalGenealogyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3B8F292D012C00ABCE8E /* AnimalGenealogyView.swift */; };
+		30FD3B92292D2BB600ABCE8E /* Geneology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3B91292D2BB600ABCE8E /* Geneology.swift */; };
+		30FD3B94292D336D00ABCE8E /* AnimalGenealogyViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3B93292D336D00ABCE8E /* AnimalGenealogyViewState.swift */; };
+		30FD3B96292D33D100ABCE8E /* AnimalGenealogyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3B95292D33D100ABCE8E /* AnimalGenealogyViewModel.swift */; };
+		30FD3B98292D380900ABCE8E /* GenealogyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3B97292D380900ABCE8E /* GenealogyExtensions.swift */; };
 		B30BB05AD8A596DAF5201755 /* Pods_HorseConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +115,11 @@
 		30E21718292A6E06006435C2 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		30E2171E292BFFCE006435C2 /* AnimalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailView.swift; sourceTree = "<group>"; };
 		30E21721292C0072006435C2 /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
+		30FD3B8F292D012C00ABCE8E /* AnimalGenealogyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGenealogyView.swift; sourceTree = "<group>"; };
+		30FD3B91292D2BB600ABCE8E /* Geneology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geneology.swift; sourceTree = "<group>"; };
+		30FD3B93292D336D00ABCE8E /* AnimalGenealogyViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGenealogyViewState.swift; sourceTree = "<group>"; };
+		30FD3B95292D33D100ABCE8E /* AnimalGenealogyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGenealogyViewModel.swift; sourceTree = "<group>"; };
+		30FD3B97292D380900ABCE8E /* GenealogyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenealogyExtensions.swift; sourceTree = "<group>"; };
 		6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HorseConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44592FF27BA547647D81A38 /* Pods-HorseConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorseConnect.debug.xcconfig"; path = "Target Support Files/Pods-HorseConnect/Pods-HorseConnect.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +190,7 @@
 				3077DA2D291DF9D2002D6607 /* Extensions */,
 				3077DA2B291DF924002D6607 /* FarmData.swift */,
 				30E216F829296CEF006435C2 /* Animal.swift */,
+				30FD3B91292D2BB600ABCE8E /* Geneology.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +200,7 @@
 			children = (
 				3077DA2E291DF9E1002D6607 /* FarmDataExtensions.swift */,
 				30E217052929A7F3006435C2 /* AnimalExtensions.swift */,
+				30FD3B97292D380900ABCE8E /* GenealogyExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,6 +304,7 @@
 		30E216F429296A6D006435C2 /* Animals */ = {
 			isa = PBXGroup;
 			children = (
+				30FD3B8E292D00D800ABCE8E /* AnimalGenealogy */,
 				30E2171D292BFFBA006435C2 /* AnimalDetail */,
 				30E2170F2929CC28006435C2 /* AnimalsRegister */,
 				30E216FD2929747D006435C2 /* AnimalsHome */,
@@ -358,6 +371,16 @@
 				30E21721292C0072006435C2 /* CachedImageView.swift */,
 			);
 			path = CachedImage;
+			sourceTree = "<group>";
+		};
+		30FD3B8E292D00D800ABCE8E /* AnimalGenealogy */ = {
+			isa = PBXGroup;
+			children = (
+				30FD3B8F292D012C00ABCE8E /* AnimalGenealogyView.swift */,
+				30FD3B93292D336D00ABCE8E /* AnimalGenealogyViewState.swift */,
+				30FD3B95292D33D100ABCE8E /* AnimalGenealogyViewModel.swift */,
+			);
+			path = AnimalGenealogy;
 			sourceTree = "<group>";
 		};
 		66D9A4D30DC36D7D45F2EADD /* Frameworks */ = {
@@ -494,6 +517,7 @@
 			files = (
 				3077DA22291DC85F002D6607 /* ToolbarViewState.swift in Sources */,
 				30A21FAA291D2894000EF7D4 /* LoginView.swift in Sources */,
+				30FD3B94292D336D00ABCE8E /* AnimalGenealogyViewState.swift in Sources */,
 				30E217082929AB56006435C2 /* AnimalsListViewState.swift in Sources */,
 				30A21FAC291D293B000EF7D4 /* ViewExtensions.swift in Sources */,
 				30E217112929CC3C006435C2 /* AnimalsRegisterView.swift in Sources */,
@@ -508,12 +532,15 @@
 				30E21719292A6E06006435C2 /* StringExtensions.swift in Sources */,
 				30E216FC29296FF5006435C2 /* SearchView.swift in Sources */,
 				30A21FAF291D2963000EF7D4 /* CornerRadiusStyle.swift in Sources */,
+				30FD3B92292D2BB600ABCE8E /* Geneology.swift in Sources */,
 				3077DA2C291DF924002D6607 /* FarmData.swift in Sources */,
 				3077DA29291DF4FF002D6607 /* Repository.swift in Sources */,
 				30E217022929762F006435C2 /* CardView.swift in Sources */,
 				3077DA24291DC8F2002D6607 /* NavigationUtil.swift in Sources */,
 				303BD1ED291D68B4007E43B3 /* ProgressView.swift in Sources */,
 				30A21FB1291D2994000EF7D4 /* OverlayModifier.swift in Sources */,
+				30FD3B96292D33D100ABCE8E /* AnimalGenealogyViewModel.swift in Sources */,
+				30FD3B90292D012C00ABCE8E /* AnimalGenealogyView.swift in Sources */,
 				30E216FF2929748C006435C2 /* AnimalsHomeView.swift in Sources */,
 				30E2170A2929AB60006435C2 /* AnimalsListViewModel.swift in Sources */,
 				3077DA37291E7460002D6607 /* HomeViewModel.swift in Sources */,
@@ -523,6 +550,7 @@
 				30A21FBB291D2BAB000EF7D4 /* LoginViewState.swift in Sources */,
 				30A21F8F291D252A000EF7D4 /* HorseConnectApp.swift in Sources */,
 				3077DA2F291DF9E1002D6607 /* FarmDataExtensions.swift in Sources */,
+				30FD3B98292D380900ABCE8E /* GenealogyExtensions.swift in Sources */,
 				3077DA33291E0366002D6607 /* SingletonUtil.swift in Sources */,
 				30A21FB9291D2B94000EF7D4 /* TextExtensions.swift in Sources */,
 				30A21F9F291D2590000EF7D4 /* SplashView.swift in Sources */,

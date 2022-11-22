@@ -12,6 +12,7 @@ import Combine
 class Repository: ObservableObject {
     private let farmDataPath: String = "farms-data"
     private let animalsPath: String = "animals"
+    private let genealogiesPath: String = "genealogies"
     private let store = Firestore.firestore()
     
     func addFarmData(farmData: FarmData, userId: String, complete: @escaping () -> Void) {
@@ -52,7 +53,7 @@ class Repository: ObservableObject {
     func addAnimal(animal: Animal, complete: @escaping () -> Void) {
         store.collection(animalsPath).addDocument(data: animal.toMap()){ error in
             if let err = error {
-                fatalError("Unable to add farm-data: \(err.localizedDescription).")
+                fatalError("Unable to add animal: \(err.localizedDescription).")
             }
             complete()
         }
@@ -61,9 +62,27 @@ class Repository: ObservableObject {
     func updateAnimal(animal: Animal, complete: @escaping () -> Void) {
         store.collection(animalsPath).document(animal.id ?? "").setData(animal.toMap()){ error in
             if let err = error {
-                fatalError("Unable to add farm-data: \(err.localizedDescription).")
+                fatalError("Unable to add animal: \(err.localizedDescription).")
             }
             complete()
+        }
+    }
+    
+    func createGenealogy(animalId: String, genealogy: Genealogy, complete: @escaping () -> Void) {
+        store.collection(genealogiesPath).document(animalId).setData(genealogy.toMap()){ error in
+            if let err = error {
+                fatalError("Unable to add genealogy: \(err.localizedDescription).")
+            }
+            complete()
+        }
+    }
+    
+    func getGenealogyByAnimal(animalId: String, complete: @escaping (Genealogy?) -> Void){
+        store.collection(genealogiesPath).document(animalId).getDocument(completion: ) { (documentSnapshot, error) in
+            if let err = error {
+                fatalError("Unable to get genealogy: \(err.localizedDescription).")
+            }
+            complete(documentSnapshot?.data()?.toGenealogy(id: animalId))
         }
     }
 }

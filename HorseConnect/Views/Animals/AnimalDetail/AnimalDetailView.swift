@@ -11,6 +11,7 @@ struct AnimalDetailView: View {
     
     @State var animal: Animal
     @State var navigateToAnimalRegisterView = false
+    @State var navigateToAnimalGenealogyView = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -32,17 +33,24 @@ struct AnimalDetailView: View {
             titleDescription(title: "Vivo:", description: animal.isLive ? "Sim" : "Não")
             Spacer()
             Button(action: {
-                
+                navigateToAnimalGenealogyView.toggle()
             }) {
                 Text("GENEALOGIA")
                     .textPrimaryButtonStyle(isEnabled: true)
             }
             .primaryButtonStyle(isEnabled: true)
-            NavigationLink(
-                destination: AnimalsRegisterView(),
-                isActive: $navigateToAnimalRegisterView,
-                label: {}
-            )
+            Group{
+                NavigationLink(
+                    destination: AnimalGenealogyView(animal: animal),
+                    isActive: $navigateToAnimalGenealogyView,
+                    label: {}
+                )
+                NavigationLink(
+                    destination: AnimalsRegisterView(),
+                    isActive: $navigateToAnimalRegisterView,
+                    label: {}
+                )
+            } 
         }
         .onAppear{
             if let anim = SingletonUtil.shared.animal {
