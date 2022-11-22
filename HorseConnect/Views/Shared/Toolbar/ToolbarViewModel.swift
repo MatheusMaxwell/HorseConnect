@@ -12,6 +12,7 @@ final class ToolbarViewModel: ObservableObject {
     
     @Published private(set) var state: ToolbarViewState
     private let auth = Auth.auth()
+    private let dataController = DataController.shared
     
     init(initialState: ToolbarViewState = .init()) {
         state = initialState
@@ -26,6 +27,7 @@ final class ToolbarViewModel: ObservableObject {
             try auth.signOut()
             SingletonUtil.shared.farmData = nil
             SingletonUtil.shared.userUid = ""
+            dataController.clearAllData()
             NavigationUtil.popToRootView()
         }catch let error as NSError {
             print(error)

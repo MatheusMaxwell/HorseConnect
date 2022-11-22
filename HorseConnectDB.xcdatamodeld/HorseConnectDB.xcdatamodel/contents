@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AnimalEntity" representedClassName="AnimalEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="birthDate" optional="YES" attributeType="String"/>
+        <attribute name="coat" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="imageId" optional="YES" attributeType="String"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String"/>
+        <attribute name="isLive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="sex" optional="YES" attributeType="String"/>
+        <attribute name="types" optional="YES" attributeType="String"/>
+        <attribute name="userId" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="FarmDataEntity" representedClassName="FarmDataEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="farmName" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="imageLogoUrl" optional="YES" attributeType="String"/>
+        <attribute name="primaryColor" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="GenealogyEntity" representedClassName="GenealogyEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="father" optional="YES" attributeType="String"/>
+        <attribute name="fatherGrandFather" optional="YES" attributeType="String"/>
+        <attribute name="fatherGrandFatherGreatGrandFather" optional="YES" attributeType="String"/>
+        <attribute name="fatherGrandFatherGreatGrandMother" optional="YES" attributeType="String"/>
+        <attribute name="fatherGrandMother" optional="YES" attributeType="String"/>
+        <attribute name="fatherGrandMotherGreatGrandFather" optional="YES" attributeType="String"/>
+        <attribute name="fatherGrandMotherGreatGrandMother" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="mother" optional="YES" attributeType="String"/>
+        <attribute name="motherGrandFather" optional="YES" attributeType="String"/>
+        <attribute name="motherGrandFatherGreatGrandFather" optional="YES" attributeType="String"/>
+        <attribute name="motherGrandFatherGreatGrandMother" optional="YES" attributeType="String"/>
+        <attribute name="motherGrandMother" optional="YES" attributeType="String"/>
+        <attribute name="motherGrandMotherGreatGrandFather" optional="YES" attributeType="String"/>
+        <attribute name="motherGrandMotherGreatGrandMother" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+</model>

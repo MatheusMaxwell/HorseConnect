@@ -5,6 +5,8 @@
 //  Created by Matheus Maxwell Meireles on 19/11/22.
 //
 
+import CoreData
+
 extension Animal {
     
     func toMap() -> [String:Any]{
@@ -19,6 +21,28 @@ extension Animal {
         map["types"] = self.types?.joined(separator: ",")
         map["userId"] = self.userId
         return map
+    }
+    
+    func toEntity(context: NSManagedObjectContext){
+        let animal = AnimalEntity(context: context)
+        animal.id = self.id
+        animal.name = self.name
+        animal.imageId = self.imageId
+        animal.imageUrl = self.imageUrl
+        animal.birthDate = self.birthDate
+        animal.coat = self.coat
+        animal.sex = self.sex
+        animal.isLive = self.isLive
+        animal.types = self.types?.joined(separator: ",")
+        animal.userId = self.userId
+    }
+}
+
+extension [Animal]{
+    func toAnimalsEntity (context: NSManagedObjectContext){
+        _ = self.map{
+            $0.toEntity(context: context)
+        }
     }
 }
 
