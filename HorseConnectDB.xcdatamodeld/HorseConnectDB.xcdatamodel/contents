@@ -26,6 +26,8 @@
         <attribute name="maleId" attributeType="String"/>
         <attribute name="receiver" attributeType="String"/>
         <attribute name="receiverId" attributeType="String"/>
+        <attribute name="sex" attributeType="String"/>
+        <attribute name="status" attributeType="String"/>
         <attribute name="userId" attributeType="String"/>
     </entity>
     <entity name="FarmDataEntity" representedClassName="FarmDataEntity" syncable="YES" codeGenerationType="class">

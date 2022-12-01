@@ -16,5 +16,17 @@ struct Embryo: Identifiable {
     var receiverId: String
     var date: String
     var userId: String
- 
+    var sex: String
+    var status: String
+}
+
+struct EmbryoSex {
+    static let UNAVAILABLE = "Indisponível"
+    static let MALE = "Macho"
+    static let FEMALE = "Fêmea"
+}
+
+struct EmbryoStatus {
+    static let TO_CONFIRM = "A confirmar"
+    static let CONFIRMED = "Confirmado"
 }

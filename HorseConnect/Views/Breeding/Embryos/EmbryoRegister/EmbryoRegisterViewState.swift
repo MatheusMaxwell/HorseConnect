@@ -14,6 +14,8 @@ struct EmbryoRegisterViewState{
     var maleSelected = PICKER_EMPTY_STATE
     var femaleSelected = PICKER_EMPTY_STATE
     var receiversSelected = PICKER_EMPTY_STATE
+    var sexSelected = EmbryoSex.UNAVAILABLE
+    var statusSelected = EmbryoStatus.TO_CONFIRM
     var date = Date()
 
     var canSubmit: Bool {

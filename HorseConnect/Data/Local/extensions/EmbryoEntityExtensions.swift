@@ -17,7 +17,9 @@ extension EmbryoEntity {
             receiver: self.receiver ?? "",
             receiverId: self.receiverId ?? "",
             date: self.date ?? "",
-            userId: self.userId ?? ""
+            userId: self.userId ?? "",
+            sex: self.sex ?? "",
+            status: self.status ?? ""
         )
     }
 

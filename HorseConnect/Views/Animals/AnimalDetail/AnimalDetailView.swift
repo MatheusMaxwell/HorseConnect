@@ -28,11 +28,11 @@ struct AnimalDetailView: View {
             CachedImageView(imageUrl: animal.imageUrl ?? "", width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.3)
                 .frame(maxWidth: .infinity, alignment: .center)
             Group{
-                titleDescription(title: "Nascimento:", description: animal.birthDate.getDateFromIsoDateString())
-                titleDescription(title: "Idade:", description: animal.birthDate.getYearsDifference())
-                titleDescription(title: "Sexo:", description: animal.sex)
-                titleDescription(title: "Pelagem:", description: animal.coat)
-                titleDescription(title: "Vivo:", description: animal.isLive ? "Sim" : "Não")
+                TitleDescriptionView(title: "Nascimento:", description: animal.birthDate.getDateFromIsoDateString())
+                TitleDescriptionView(title: "Idade:", description: animal.birthDate.getYearsDifference())
+                TitleDescriptionView(title: "Sexo:", description: animal.sex)
+                TitleDescriptionView(title: "Pelagem:", description: animal.coat)
+                TitleDescriptionView(title: "Vivo:", description: animal.isLive ? "Sim" : "Não")
             }
             Spacer()
             Button(action: {

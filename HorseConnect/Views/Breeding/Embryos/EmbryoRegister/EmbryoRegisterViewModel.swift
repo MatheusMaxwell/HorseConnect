@@ -20,13 +20,17 @@ final class EmbryoRegisterViewModel: ObservableObject {
         femaleSelected: Binding<String>,
         maleSelected: Binding<String>,
         receiversSelected: Binding<String>,
-        date: Binding<Date>
+        date: Binding<Date>,
+        sexSelected: Binding<String>,
+        statusSelected: Binding<String>
     ) {
         (
             femaleSelected: Binding(to: \.state.femaleSelected, on: self),
             maleSelected: Binding(to: \.state.maleSelected, on: self),
             receiversSelected: Binding(to: \.state.receiversSelected, on: self),
-            date: Binding(to: \.state.date, on: self)
+            date: Binding(to: \.state.date, on: self),
+            sexSelected: Binding(to: \.state.sexSelected, on: self),
+            statusSelected: Binding(to: \.state.statusSelected, on: self)
         )
     }
     
@@ -52,7 +56,7 @@ final class EmbryoRegisterViewModel: ObservableObject {
         let femaleId = self.state.animals.first{ $0.name == self.state.femaleSelected}?.id  ?? ""
         let maleId = self.state.animals.first{ $0.name == self.state.maleSelected}?.id ?? ""
         let receiverId = self.state.animals.first{ $0.name == self.state.receiversSelected}?.id ?? ""
-        let embryo = Embryo(female: self.state.femaleSelected, femaleId: femaleId, male: self.state.maleSelected, maleId: maleId, receiver: self.state.receiversSelected, receiverId: receiverId, date: self.state.date.ISO8601Format(), userId: SingletonUtil.shared.userUid)
+        let embryo = Embryo(female: self.state.femaleSelected, femaleId: femaleId, male: self.state.maleSelected, maleId: maleId, receiver: self.state.receiversSelected, receiverId: receiverId, date: self.state.date.ISO8601Format(), userId: SingletonUtil.shared.userUid, sex: "", status: "")
         
         self.repository.addEmbryo(embryo: embryo) {
             DispatchQueue.main.async {

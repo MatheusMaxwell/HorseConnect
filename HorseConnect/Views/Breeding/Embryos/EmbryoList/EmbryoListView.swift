@@ -50,18 +50,16 @@ struct EmbryoListView: View {
                 else{
                     List{
                         ForEach(model.state.embryos) { embryo in
-//                            NavigationLink(destination: AnimalDetailView(animal: animal)
-//                                .navigationViewStyle(.stack)) {
-//
-//                            }
-                            
-                            VStack(alignment: .leading){
-                                Text(embryo.male + " x " + embryo.female)
-                                Text(embryo.receiver + " - " + embryo.date.getDateFromIsoDateString())
-                                    .font(.system(size: 15))
-                                    .foregroundColor(.black.opacity(0.6))
-                            }
-                            
+                            NavigationLink(destination: EmbryoDetailView(embryo: embryo)
+                                .navigationViewStyle(.stack)) {
+                                    
+                                    VStack(alignment: .leading){
+                                        Text(embryo.male + " x " + embryo.female)
+                                        Text(embryo.receiver + " - " + embryo.date.getDateFromIsoDateString())
+                                            .font(.system(size: 15))
+                                            .foregroundColor(.black.opacity(0.6))
+                                    }
+                                }
                         }
                     }
                     .listStyle(.plain)

@@ -24,24 +24,33 @@ struct EmbryoRegisterView: View {
                             Text(animal.name)
                                 .tag(animal.name)
                         }
-                    }.id(UUID())
+                    }
                     Picker("Égua", selection: model.bindings.femaleSelected) {
                         Text(PICKER_EMPTY_STATE).tag(PICKER_EMPTY_STATE)
                         ForEach(model.state.animalsFemale, id: \.self) { animal in
                             Text(animal.name)
                                 .tag(animal.name)
                         }
-                    }.id(UUID())
+                    }
                     Picker("Receptora", selection: model.bindings.receiversSelected) {
                         Text(PICKER_EMPTY_STATE).tag(PICKER_EMPTY_STATE)
                         ForEach(model.state.animalsReceivers, id: \.self) { animal in
                             Text(animal.name)
                                 .tag(animal.name)
                         }
-                    }.id(UUID())
+                    }
                     DatePicker(selection: model.bindings.date, displayedComponents: .date, label: {
                         Text("Data")
                     })
+                    Picker("Sexo", selection: model.bindings.sexSelected) {
+                        Text(EmbryoSex.UNAVAILABLE).tag(EmbryoSex.UNAVAILABLE)
+                        Text(EmbryoSex.MALE).tag(EmbryoSex.MALE)
+                        Text(EmbryoSex.FEMALE).tag(EmbryoSex.FEMALE)
+                    }
+                    Picker("Situação", selection: model.bindings.statusSelected) {
+                        Text(EmbryoStatus.TO_CONFIRM).tag(EmbryoStatus.TO_CONFIRM)
+                        Text(EmbryoStatus.CONFIRMED).tag(EmbryoStatus.CONFIRMED)
+                    }
                 }
                 Button(action: {
                     self.model.createEmbryo {

@@ -19,7 +19,8 @@ extension Embryo {
         map["receiverId"] = self.receiverId
         map["date"] = self.date
         map["userId"] = self.userId
-        
+        map["sex"] = self.sex
+        map["status"] = self.status
         return map
     }
     
@@ -34,6 +35,8 @@ extension Embryo {
         embryo.receiverId = self.receiverId
         embryo.date = self.date
         embryo.userId = self.userId
+        embryo.sex = self.sex
+        embryo.status = self.status
     }
 }
 extension [String:Any]{
@@ -48,7 +51,9 @@ extension [String:Any]{
             receiver: self["receiver"] as! String,
             receiverId: self["receiverId"] as! String,
             date: self["date"] as! String,
-            userId: self["userId"] as! String
+            userId: self["userId"] as! String,
+            sex: self["sex"] as! String,
+            status: self["status"] as! String
         )
     }
     

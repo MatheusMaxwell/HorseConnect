@@ -13,11 +13,7 @@ struct AnimalsRegisterView: View {
     @StateObject private var model = AnimalsRegisterViewModel()
     @State var showSheetTypes = false
     @Environment(\.dismiss) var dismiss
-    
-//    init(animal: Animal? = nil) {
-//        self.model.setAnimal(animal: animal)
-//    }
-    
+
     private let allTypesPossible = [
         AnimalType.stallion.rawValue,
         AnimalType.donor.rawValue,
