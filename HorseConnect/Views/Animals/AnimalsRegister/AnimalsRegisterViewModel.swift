@@ -80,9 +80,13 @@ class AnimalsRegisterViewModel: ObservableObject {
     }
     
     func updateImage(imageId: String, complete: @escaping (_ imageId: String, _ url: String ) -> Void){
+        var imageIdCopy = imageId
+        if(imageIdCopy.isEmpty){
+            imageIdCopy = UUID().uuidString
+        }
         DispatchQueue.main.async {
-            let childRef = self.storage.reference().child("animals/" + imageId + ".png")
-            if let data = self.state.imageSelected?.pngData() {
+            let childRef = self.storage.reference().child("animals/" + imageIdCopy + ".png")
+            if let data = self.state.imageSelected?.jpegData(compressionQuality: 0.3) {
                 _ = childRef.putData(data, metadata: nil) { (metadata, error) in
                     guard let metadata = metadata else {
                         complete("", "")
@@ -95,7 +99,7 @@ class AnimalsRegisterViewModel: ObservableObject {
                             return
                         }
                         
-                        complete(imageId, url?.description ?? "")
+                        complete(imageIdCopy, url?.description ?? "")
                     }
                 }
             }
