@@ -26,6 +26,7 @@ struct AnimalsRegisterView: View {
         AnimalType.promises.rawValue,
         AnimalType.gelding.rawValue,
         AnimalType.receivers.rawValue,
+        AnimalType.animalOutside.rawValue
     ]
     
     var body: some View {

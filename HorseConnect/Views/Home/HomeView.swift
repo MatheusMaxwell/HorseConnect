@@ -11,7 +11,7 @@ import CachedAsyncImage
 struct HomeView: View {
     @StateObject private var model = HomeViewModel()
     @State var navigateToAnimalsHome = false
-
+    @State var navigateToBreedingHome = false
     
     init() {
         URLCache.shared.memoryCapacity = 10_000_000 // ~10 MB memory space
@@ -75,6 +75,11 @@ struct HomeView: View {
                 isActive: $navigateToAnimalsHome,
                 label: {}
             )
+            NavigationLink(
+                destination: BreedingHomeView(),
+                isActive: $navigateToBreedingHome,
+                label: {}
+            )
         }
         .onAppear{
             model.getFarmData(userId: SingletonUtil.shared.userUid)
@@ -95,7 +100,7 @@ struct HomeView: View {
                     .padding(.trailing, 5)
                     .padding(.bottom)
                 CardView(imagePath: "StationCardHome", title: "Estação", farmData: model.state.farmData){
-                    
+                    navigateToBreedingHome.toggle()
                 }
                     .padding(.leading, 5)
                     .padding(.bottom)

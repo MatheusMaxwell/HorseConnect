@@ -27,10 +27,13 @@ struct AnimalDetailView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
             CachedImageView(imageUrl: animal.imageUrl ?? "", width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.3)
                 .frame(maxWidth: .infinity, alignment: .center)
-            titleDescription(title: "Nascimento:", description: animal.birthDate.getDateFromIsoDateString())
-            titleDescription(title: "Sexo:", description: animal.sex)
-            titleDescription(title: "Pelagem:", description: animal.coat)
-            titleDescription(title: "Vivo:", description: animal.isLive ? "Sim" : "Não")
+            Group{
+                titleDescription(title: "Nascimento:", description: animal.birthDate.getDateFromIsoDateString())
+                titleDescription(title: "Idade:", description: animal.birthDate.getYearsDifference())
+                titleDescription(title: "Sexo:", description: animal.sex)
+                titleDescription(title: "Pelagem:", description: animal.coat)
+                titleDescription(title: "Vivo:", description: animal.isLive ? "Sim" : "Não")
+            }
             Spacer()
             Button(action: {
                 navigateToAnimalGenealogyView.toggle()

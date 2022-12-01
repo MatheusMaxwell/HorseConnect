@@ -104,6 +104,8 @@ struct AnimalsListView: View {
             return "Castrados"
         case .receivers:
             return "Receptoras"
+        case .animalOutside:
+            return "Animais usados de fora"
         case .none:
             return ""
         }

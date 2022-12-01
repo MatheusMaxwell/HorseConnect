@@ -17,6 +17,17 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <entity name="EmbryoEntity" representedClassName="EmbryoEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="date" attributeType="String"/>
+        <attribute name="female" attributeType="String"/>
+        <attribute name="femaleId" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="male" attributeType="String"/>
+        <attribute name="maleId" attributeType="String"/>
+        <attribute name="receiver" attributeType="String"/>
+        <attribute name="receiverId" attributeType="String"/>
+        <attribute name="userId" attributeType="String"/>
+    </entity>
     <entity name="FarmDataEntity" representedClassName="FarmDataEntity" syncable="YES" codeGenerationType="class">
         <attribute name="farmName" optional="YES" attributeType="String"/>
         <attribute name="id" attributeType="String"/>

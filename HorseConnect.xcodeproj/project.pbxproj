@@ -66,6 +66,18 @@
 		30FD3BA4292D549000ABCE8E /* FarmDataEntityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BA3292D549000ABCE8E /* FarmDataEntityExtensions.swift */; };
 		30FD3BA6292D54F300ABCE8E /* GenealogyEntityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BA5292D54F300ABCE8E /* GenealogyEntityExtensions.swift */; };
 		30FD3BA8292D600500ABCE8E /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BA7292D600500ABCE8E /* NetworkMonitor.swift */; };
+		30FD3BAC2936C1F700ABCE8E /* BreedingHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BAB2936C1F700ABCE8E /* BreedingHomeView.swift */; };
+		30FD3BAF2936C49800ABCE8E /* CardViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BAE2936C49800ABCE8E /* CardViewRow.swift */; };
+		30FD3BB6293804B200ABCE8E /* EmbryoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BB5293804B200ABCE8E /* EmbryoListView.swift */; };
+		30FD3BB82938055C00ABCE8E /* EmbryoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BB72938055C00ABCE8E /* EmbryoListViewModel.swift */; };
+		30FD3BBA2938057A00ABCE8E /* EmbryoListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BB92938057A00ABCE8E /* EmbryoListViewState.swift */; };
+		30FD3BBC2938059800ABCE8E /* Embryo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BBB2938059800ABCE8E /* Embryo.swift */; };
+		30FD3BC029380E2600ABCE8E /* EmbryoRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BBF29380E2600ABCE8E /* EmbryoRegisterView.swift */; };
+		30FD3BC229380E9B00ABCE8E /* EmbryoRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BC129380E9B00ABCE8E /* EmbryoRegisterViewModel.swift */; };
+		30FD3BC429380EE200ABCE8E /* EmbryoRegisterViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BC329380EE200ABCE8E /* EmbryoRegisterViewState.swift */; };
+		30FD3BC62938153700ABCE8E /* EmbryoExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BC52938153700ABCE8E /* EmbryoExtensions.swift */; };
+		30FD3BC829381BD000ABCE8E /* EmbryoEntityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BC729381BD000ABCE8E /* EmbryoEntityExtensions.swift */; };
+		30FD3BCA2938282900ABCE8E /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BC92938282900ABCE8E /* TimeIntervalExtensions.swift */; };
 		B30BB05AD8A596DAF5201755 /* Pods_HorseConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +144,18 @@
 		30FD3BA3292D549000ABCE8E /* FarmDataEntityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmDataEntityExtensions.swift; sourceTree = "<group>"; };
 		30FD3BA5292D54F300ABCE8E /* GenealogyEntityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenealogyEntityExtensions.swift; sourceTree = "<group>"; };
 		30FD3BA7292D600500ABCE8E /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		30FD3BAB2936C1F700ABCE8E /* BreedingHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedingHomeView.swift; sourceTree = "<group>"; };
+		30FD3BAE2936C49800ABCE8E /* CardViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewRow.swift; sourceTree = "<group>"; };
+		30FD3BB5293804B200ABCE8E /* EmbryoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoListView.swift; sourceTree = "<group>"; };
+		30FD3BB72938055C00ABCE8E /* EmbryoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoListViewModel.swift; sourceTree = "<group>"; };
+		30FD3BB92938057A00ABCE8E /* EmbryoListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoListViewState.swift; sourceTree = "<group>"; };
+		30FD3BBB2938059800ABCE8E /* Embryo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Embryo.swift; sourceTree = "<group>"; };
+		30FD3BBF29380E2600ABCE8E /* EmbryoRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoRegisterView.swift; sourceTree = "<group>"; };
+		30FD3BC129380E9B00ABCE8E /* EmbryoRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoRegisterViewModel.swift; sourceTree = "<group>"; };
+		30FD3BC329380EE200ABCE8E /* EmbryoRegisterViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoRegisterViewState.swift; sourceTree = "<group>"; };
+		30FD3BC52938153700ABCE8E /* EmbryoExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoExtensions.swift; sourceTree = "<group>"; };
+		30FD3BC729381BD000ABCE8E /* EmbryoEntityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoEntityExtensions.swift; sourceTree = "<group>"; };
+		30FD3BC92938282900ABCE8E /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HorseConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44592FF27BA547647D81A38 /* Pods-HorseConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorseConnect.debug.xcconfig"; path = "Target Support Files/Pods-HorseConnect/Pods-HorseConnect.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +185,7 @@
 		303BD1EA291D689F007E43B3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				30FD3BAD2936C47C00ABCE8E /* CardViewRow */,
 				30E21720292C0064006435C2 /* CachedImage */,
 				30E217002929761A006435C2 /* CardView */,
 				30E216FA29296FE5006435C2 /* SearchView */,
@@ -195,6 +220,7 @@
 				3077DA2B291DF924002D6607 /* FarmData.swift */,
 				30E216F829296CEF006435C2 /* Animal.swift */,
 				30FD3B91292D2BB600ABCE8E /* Geneology.swift */,
+				30FD3BBB2938059800ABCE8E /* Embryo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,6 +231,7 @@
 				3077DA2E291DF9E1002D6607 /* FarmDataExtensions.swift */,
 				30E217052929A7F3006435C2 /* AnimalExtensions.swift */,
 				30FD3B97292D380900ABCE8E /* GenealogyExtensions.swift */,
+				30FD3BC52938153700ABCE8E /* EmbryoExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,6 +275,7 @@
 		30A21F9D291D2582000EF7D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				30FD3BA92936C1CF00ABCE8E /* Breeding */,
 				30E216F429296A6D006435C2 /* Animals */,
 				303BD1EA291D689F007E43B3 /* Shared */,
 				303BD1E5291D422F007E43B3 /* Home */,
@@ -267,6 +295,7 @@
 				30A21FB8291D2B94000EF7D4 /* TextExtensions.swift */,
 				3077DA30291DFFC8002D6607 /* UIColorEtensions.swift */,
 				30E21718292A6E06006435C2 /* StringExtensions.swift */,
+				30FD3BC92938282900ABCE8E /* TimeIntervalExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,8 +442,79 @@
 				30FD3BA1292D534400ABCE8E /* AnimalEntityExtensions.swift */,
 				30FD3BA3292D549000ABCE8E /* FarmDataEntityExtensions.swift */,
 				30FD3BA5292D54F300ABCE8E /* GenealogyEntityExtensions.swift */,
+				30FD3BC729381BD000ABCE8E /* EmbryoEntityExtensions.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		30FD3BA92936C1CF00ABCE8E /* Breeding */ = {
+			isa = PBXGroup;
+			children = (
+				30FD3BBD29380E0000ABCE8E /* Embryos */,
+				30FD3BB22936C8BF00ABCE8E /* GiveBirthList */,
+				30FD3BB12936C8B000ABCE8E /* InseminationList */,
+				30FD3BAA2936C1E100ABCE8E /* BreedingHome */,
+			);
+			path = Breeding;
+			sourceTree = "<group>";
+		};
+		30FD3BAA2936C1E100ABCE8E /* BreedingHome */ = {
+			isa = PBXGroup;
+			children = (
+				30FD3BAB2936C1F700ABCE8E /* BreedingHomeView.swift */,
+			);
+			path = BreedingHome;
+			sourceTree = "<group>";
+		};
+		30FD3BAD2936C47C00ABCE8E /* CardViewRow */ = {
+			isa = PBXGroup;
+			children = (
+				30FD3BAE2936C49800ABCE8E /* CardViewRow.swift */,
+			);
+			path = CardViewRow;
+			sourceTree = "<group>";
+		};
+		30FD3BB02936C8A600ABCE8E /* EmbryoList */ = {
+			isa = PBXGroup;
+			children = (
+				30FD3BB5293804B200ABCE8E /* EmbryoListView.swift */,
+				30FD3BB72938055C00ABCE8E /* EmbryoListViewModel.swift */,
+				30FD3BB92938057A00ABCE8E /* EmbryoListViewState.swift */,
+			);
+			path = EmbryoList;
+			sourceTree = "<group>";
+		};
+		30FD3BB12936C8B000ABCE8E /* InseminationList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InseminationList;
+			sourceTree = "<group>";
+		};
+		30FD3BB22936C8BF00ABCE8E /* GiveBirthList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GiveBirthList;
+			sourceTree = "<group>";
+		};
+		30FD3BBD29380E0000ABCE8E /* Embryos */ = {
+			isa = PBXGroup;
+			children = (
+				30FD3BBE29380E1000ABCE8E /* EmbryoRegister */,
+				30FD3BB02936C8A600ABCE8E /* EmbryoList */,
+			);
+			path = Embryos;
+			sourceTree = "<group>";
+		};
+		30FD3BBE29380E1000ABCE8E /* EmbryoRegister */ = {
+			isa = PBXGroup;
+			children = (
+				30FD3BBF29380E2600ABCE8E /* EmbryoRegisterView.swift */,
+				30FD3BC129380E9B00ABCE8E /* EmbryoRegisterViewModel.swift */,
+				30FD3BC329380EE200ABCE8E /* EmbryoRegisterViewState.swift */,
+			);
+			path = EmbryoRegister;
 			sourceTree = "<group>";
 		};
 		66D9A4D30DC36D7D45F2EADD /* Frameworks */ = {
@@ -552,6 +652,7 @@
 				3077DA22291DC85F002D6607 /* ToolbarViewState.swift in Sources */,
 				30A21FAA291D2894000EF7D4 /* LoginView.swift in Sources */,
 				30FD3B94292D336D00ABCE8E /* AnimalGenealogyViewState.swift in Sources */,
+				30FD3BAF2936C49800ABCE8E /* CardViewRow.swift in Sources */,
 				30FD3BA6292D54F300ABCE8E /* GenealogyEntityExtensions.swift in Sources */,
 				30E217082929AB56006435C2 /* AnimalsListViewState.swift in Sources */,
 				30A21FAC291D293B000EF7D4 /* ViewExtensions.swift in Sources */,
@@ -559,6 +660,7 @@
 				3077DA39291E8BE8002D6607 /* ColorUtil.swift in Sources */,
 				3077DA35291E7451002D6607 /* HomeViewState.swift in Sources */,
 				30E21722292C0072006435C2 /* CachedImageView.swift in Sources */,
+				30FD3BC829381BD000ABCE8E /* EmbryoEntityExtensions.swift in Sources */,
 				3077DA20291DC85F002D6607 /* ToolbarViewModel.swift in Sources */,
 				30A21FA1291D270E000EF7D4 /* SplashViewModel.swift in Sources */,
 				30A21FA4291D274C000EF7D4 /* BindingExtensions.swift in Sources */,
@@ -570,6 +672,7 @@
 				30FD3B92292D2BB600ABCE8E /* Geneology.swift in Sources */,
 				3077DA2C291DF924002D6607 /* FarmData.swift in Sources */,
 				3077DA29291DF4FF002D6607 /* Repository.swift in Sources */,
+				30FD3BB82938055C00ABCE8E /* EmbryoListViewModel.swift in Sources */,
 				30E217022929762F006435C2 /* CardView.swift in Sources */,
 				3077DA24291DC8F2002D6607 /* NavigationUtil.swift in Sources */,
 				303BD1ED291D68B4007E43B3 /* ProgressView.swift in Sources */,
@@ -581,8 +684,10 @@
 				30E216FF2929748C006435C2 /* AnimalsHomeView.swift in Sources */,
 				30E2170A2929AB60006435C2 /* AnimalsListViewModel.swift in Sources */,
 				30FD3BA4292D549000ABCE8E /* FarmDataEntityExtensions.swift in Sources */,
+				30FD3BC429380EE200ABCE8E /* EmbryoRegisterViewState.swift in Sources */,
 				3077DA37291E7460002D6607 /* HomeViewModel.swift in Sources */,
 				30A21FA6291D2760000EF7D4 /* SplashViewState.swift in Sources */,
+				30FD3BBA2938057A00ABCE8E /* EmbryoListViewState.swift in Sources */,
 				30A21FBD291D2BB4000EF7D4 /* LoginViewModel.swift in Sources */,
 				30E217172929DC5A006435C2 /* MultipleSelectionRow.swift in Sources */,
 				30A21FBB291D2BAB000EF7D4 /* LoginViewState.swift in Sources */,
@@ -590,6 +695,7 @@
 				3077DA2F291DF9E1002D6607 /* FarmDataExtensions.swift in Sources */,
 				30FD3B98292D380900ABCE8E /* GenealogyExtensions.swift in Sources */,
 				30FD3B9F292D52AD00ABCE8E /* DataController.swift in Sources */,
+				30FD3BAC2936C1F700ABCE8E /* BreedingHomeView.swift in Sources */,
 				30FD3BA8292D600500ABCE8E /* NetworkMonitor.swift in Sources */,
 				3077DA33291E0366002D6607 /* SingletonUtil.swift in Sources */,
 				30A21FB9291D2B94000EF7D4 /* TextExtensions.swift in Sources */,
@@ -598,13 +704,19 @@
 				30E217132929CC5C006435C2 /* AnimalsRegisterViewState.swift in Sources */,
 				30E216F929296CEF006435C2 /* Animal.swift in Sources */,
 				303BD1E7291D4239007E43B3 /* HomeView.swift in Sources */,
+				30FD3BC029380E2600ABCE8E /* EmbryoRegisterView.swift in Sources */,
 				30A21FB5291D2AC0000EF7D4 /* ButtonExtensions.swift in Sources */,
+				30FD3BC229380E9B00ABCE8E /* EmbryoRegisterViewModel.swift in Sources */,
+				30FD3BB6293804B200ABCE8E /* EmbryoListView.swift in Sources */,
 				30E216F729296A87006435C2 /* AnimalsListView.swift in Sources */,
 				3077DA21291DC85F002D6607 /* ToolbarView.swift in Sources */,
 				3077DA31291DFFC8002D6607 /* UIColorEtensions.swift in Sources */,
 				30A21FB7291D2B3E000EF7D4 /* ColorExtensions.swift in Sources */,
+				30FD3BCA2938282900ABCE8E /* TimeIntervalExtensions.swift in Sources */,
 				30E217062929A7F3006435C2 /* AnimalExtensions.swift in Sources */,
 				30E217152929CC68006435C2 /* AnimalsRegisterViewModel.swift in Sources */,
+				30FD3BBC2938059800ABCE8E /* Embryo.swift in Sources */,
+				30FD3BC62938153700ABCE8E /* EmbryoExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

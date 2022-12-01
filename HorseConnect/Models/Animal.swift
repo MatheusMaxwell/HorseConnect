@@ -5,7 +5,7 @@
 //  Created by Matheus Maxwell Meireles on 19/11/22.
 //
 
-struct Animal : Identifiable {
+struct Animal : Identifiable, Hashable {
     var id: String?
     var name: String
     var imageId: String?
@@ -19,7 +19,7 @@ struct Animal : Identifiable {
 }
 
 enum AnimalType: String {
-    //Garanhao, doadoras, potros, competidores, promessas, castrados, receptoras
-    case stallion, donor, foal, competitors, promises, gelding, receivers
+    //Garanhao, doadoras, potros, competidores, promessas, castrados, receptoras, animal de fora
+    case stallion, donor, foal, competitors, promises, gelding, receivers, animalOutside
 }
 

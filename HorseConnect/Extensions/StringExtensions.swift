@@ -25,6 +25,8 @@ extension String {
             return "Castrado"
         case AnimalType.receivers.rawValue:
             return "Receptora"
+        case AnimalType.animalOutside.rawValue:
+            return "Animal usado de fora"
         default:
             return ""
         }
@@ -35,5 +37,16 @@ extension String {
         let date = newFormatter.date(from: self)
         
         return date?.formatted().components(separatedBy: " ")[0].replacingOccurrences(of: ",", with: "") ?? ""
+    }
+    
+    func getYearsDifference() -> String{
+        let newFormatter = ISO8601DateFormatter()
+        if let birthDate = newFormatter.date(from: self){
+            let years = Int(birthDate.timeIntervalSinceNow.asYears()) * -1
+            var months = Int(birthDate.timeIntervalSinceNow.asMonths()) * -1
+            months = months - (12 * years)
+            return "\(years) ano(s) e \(months) mes(es)"
+        }
+        return ""
     }
 }

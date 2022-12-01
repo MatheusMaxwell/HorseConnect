@@ -12,6 +12,7 @@ class Repository: ObservableObject {
     private let farmDataPath: String = "farms-data"
     private let animalsPath: String = "animals"
     private let genealogiesPath: String = "genealogies"
+    private let embryosPath: String = "embryos"
     private let store = Firestore.firestore()
     private let dataController = DataController.shared
     private let monitor = NetworkMonitor()
@@ -118,4 +119,35 @@ class Repository: ObservableObject {
         }
     }
     
+    func addEmbryo(embryo: Embryo, complete: @escaping () -> Void) {
+        store.collection(embryosPath).addDocument(data: embryo.toMap()){ error in
+            if let err = error {
+                fatalError("Unable to add embryo: \(err.localizedDescription).")
+            }
+            complete()
+        }
+    }
+    
+    func getEmbryos(complete: @escaping ([Embryo]?) -> Void){
+        let userId = SingletonUtil.shared.userUid
+        if(monitor.isConnected){
+            store.collection(embryosPath).whereField("userId", isEqualTo: userId).getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                    complete(nil)
+                } else {
+                    var embryos = [Embryo]()
+                    for document in querySnapshot!.documents {
+                        embryos.append(document.data().toEmbryo(id: document.documentID))
+                    }
+                    self.dataController.saveEmbryos(embryos: embryos)
+                    complete(embryos)
+                }
+            }
+        }
+        else{
+            let embryos = dataController.getEmbryos()
+            complete(embryos)
+        }
+    }
 }

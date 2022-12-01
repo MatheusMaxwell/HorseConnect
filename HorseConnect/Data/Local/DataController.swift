@@ -14,6 +14,7 @@ class DataController: ObservableObject{
     private let animalEntityName = "AnimalEntity"
     private let farmDataEntityName = "FarmDataEntity"
     private let genealogyEntityName = "GenealogyEntity"
+    private let embryoEntityName = "EmbryoEntity"
     
     
     init() {
@@ -86,6 +87,26 @@ class DataController: ObservableObject{
         } catch let error as NSError {
             print(error)
             return nil
+        }
+    }
+    
+    func getEmbryos() -> [Embryo]{
+        do {
+            return try container.viewContext.fetch(NSFetchRequest<EmbryoEntity>(entityName: embryoEntityName)).toEmbryos()
+        } catch let error as NSError{
+            print(error)
+            return []
+        }
+    }
+    
+    func saveEmbryos (embryos: [Embryo]) {
+        embryos.forEach{
+            $0.toEntity(context: container.viewContext)
+        }
+        do{
+            try container.viewContext.save()
+        } catch let error as NSError {
+            print(error)
         }
     }
     
