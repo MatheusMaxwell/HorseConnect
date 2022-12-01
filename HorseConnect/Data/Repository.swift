@@ -71,6 +71,27 @@ class Repository: ObservableObject {
         }
     }
     
+    
+    func getAnimalById(animalId: String, complete: @escaping (Animal?) -> Void){
+        if(monitor.isConnected){
+            store.collection(animalsPath).document(animalId).getDocument(completion: ) { (documentSnapshot, error) in
+                if let err = error {
+                    fatalError("Unable to get genealogy: \(err.localizedDescription).")
+                }
+                if let animal = documentSnapshot?.data()?.toAnimal(id: animalId) {
+                    complete(animal)
+                }
+                else{
+                    complete(nil)
+                }
+            }
+        }
+        else{
+            let animal = dataController.getAnimalById(id: animalId)
+            complete(animal)
+        }
+    }
+    
     func addAnimal(animal: Animal, complete: @escaping () -> Void) {
         store.collection(animalsPath).addDocument(data: animal.toMap()){ error in
             if let err = error {

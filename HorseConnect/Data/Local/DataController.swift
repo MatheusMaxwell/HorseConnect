@@ -57,6 +57,18 @@ class DataController: ObservableObject{
             return []
         }
     }
+    
+    func getAnimalById(id: String) -> Animal?{
+        do{
+            let request = NSFetchRequest<AnimalEntity>(entityName: animalEntityName)
+            request.predicate = NSPredicate(format: "%K == %@", "id", id)
+            let animal: [AnimalEntity] = try container.viewContext.fetch(request)
+            return animal.first?.toAnimal()
+        } catch let error as NSError {
+            print(error)
+            return nil
+        }
+    }
    
     func saveAnimals (animals: [Animal]) {
         animals.forEach{

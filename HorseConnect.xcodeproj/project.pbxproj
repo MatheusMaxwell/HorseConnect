@@ -80,6 +80,8 @@
 		30FD3BCA2938282900ABCE8E /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BC92938282900ABCE8E /* TimeIntervalExtensions.swift */; };
 		30FD3BCD2938C59000ABCE8E /* EmbryoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BCC2938C59000ABCE8E /* EmbryoDetailView.swift */; };
 		30FD3BD02938CDF800ABCE8E /* TitleDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BCF2938CDF800ABCE8E /* TitleDescriptionView.swift */; };
+		30FD3BD42939103800ABCE8E /* EmbryoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BD32939103800ABCE8E /* EmbryoDetailViewModel.swift */; };
+		30FD3BD62939106300ABCE8E /* EmbryoDetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BD52939106300ABCE8E /* EmbryoDetailViewState.swift */; };
 		B30BB05AD8A596DAF5201755 /* Pods_HorseConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +162,8 @@
 		30FD3BC92938282900ABCE8E /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		30FD3BCC2938C59000ABCE8E /* EmbryoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoDetailView.swift; sourceTree = "<group>"; };
 		30FD3BCF2938CDF800ABCE8E /* TitleDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDescriptionView.swift; sourceTree = "<group>"; };
+		30FD3BD32939103800ABCE8E /* EmbryoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoDetailViewModel.swift; sourceTree = "<group>"; };
+		30FD3BD52939106300ABCE8E /* EmbryoDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoDetailViewState.swift; sourceTree = "<group>"; };
 		6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HorseConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44592FF27BA547647D81A38 /* Pods-HorseConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorseConnect.debug.xcconfig"; path = "Target Support Files/Pods-HorseConnect/Pods-HorseConnect.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -527,6 +531,8 @@
 			isa = PBXGroup;
 			children = (
 				30FD3BCC2938C59000ABCE8E /* EmbryoDetailView.swift */,
+				30FD3BD32939103800ABCE8E /* EmbryoDetailViewModel.swift */,
+				30FD3BD52939106300ABCE8E /* EmbryoDetailViewState.swift */,
 			);
 			path = EmbryoDetail;
 			sourceTree = "<group>";
@@ -724,11 +730,13 @@
 				30A21FB9291D2B94000EF7D4 /* TextExtensions.swift in Sources */,
 				30A21F9F291D2590000EF7D4 /* SplashView.swift in Sources */,
 				30E2171F292BFFCE006435C2 /* AnimalDetailView.swift in Sources */,
+				30FD3BD42939103800ABCE8E /* EmbryoDetailViewModel.swift in Sources */,
 				30E217132929CC5C006435C2 /* AnimalsRegisterViewState.swift in Sources */,
 				30E216F929296CEF006435C2 /* Animal.swift in Sources */,
 				303BD1E7291D4239007E43B3 /* HomeView.swift in Sources */,
 				30FD3BC029380E2600ABCE8E /* EmbryoRegisterView.swift in Sources */,
 				30A21FB5291D2AC0000EF7D4 /* ButtonExtensions.swift in Sources */,
+				30FD3BD62939106300ABCE8E /* EmbryoDetailViewState.swift in Sources */,
 				30FD3BC229380E9B00ABCE8E /* EmbryoRegisterViewModel.swift in Sources */,
 				30FD3BB6293804B200ABCE8E /* EmbryoListView.swift in Sources */,
 				30E216F729296A87006435C2 /* AnimalsListView.swift in Sources */,

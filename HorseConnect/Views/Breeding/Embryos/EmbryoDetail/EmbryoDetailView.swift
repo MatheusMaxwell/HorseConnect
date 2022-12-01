@@ -9,48 +9,67 @@ import SwiftUI
 
 struct EmbryoDetailView: View {
     var embryo: Embryo
+    @StateObject private var model = EmbryoDetailViewModel()
     
     var body: some View {
-        VStack(alignment: .leading){
-            Image(systemName: "square.and.pencil")
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .onTapGesture {
-                
+        ZStack{
+            VStack(alignment: .leading){
+                Image(systemName: "square.and.pencil")
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .onTapGesture {
+                    
+                    }
+                    .padding(.bottom, 40)
+                HStack(alignment: .center){
+                    Text(embryo.male)
+                        .fontWeight(.bold)
+                        .font(.system(size: 30))
+                        .foregroundColor(.white)
                 }
-                .padding(.bottom, 40)
-            HStack(alignment: .center){
-                Text(embryo.male)
-                    .fontWeight(.bold)
-                    .font(.system(size: 30))
-                    .foregroundColor(.white)
-            }
-            .frame(maxWidth: .infinity)
-            .padding()
-            .background(.gray)
-            .cornerRadius(12, corners: [.allCorners])
-            Text("X")
-                .fontWeight(.bold)
+                .onTapGesture {
+                    model.getAnimalById(animalId: embryo.maleId)
+                }
                 .frame(maxWidth: .infinity)
-            HStack(alignment: .center){
-                Text(embryo.female)
+                .padding()
+                .background(.gray)
+                .cornerRadius(12, corners: [.allCorners])
+                Text("X")
                     .fontWeight(.bold)
-                    .font(.system(size: 30))
-                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                HStack(alignment: .center){
+                    Text(embryo.female)
+                        .fontWeight(.bold)
+                        .font(.system(size: 30))
+                        .foregroundColor(.white)
+                }
+                .onTapGesture {
+                    model.getAnimalById(animalId: embryo.femaleId)
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(.gray)
+                .cornerRadius(12, corners: [.allCorners])
+                
+                TitleDescriptionView(title: "Receptora", description: embryo.receiver)
+                    .padding(.top, 40)
+                TitleDescriptionView(title: "Data", description: embryo.date.getDateFromIsoDateString())
+                TitleDescriptionView(title: "Sexo", description: embryo.sex)
+                TitleDescriptionView(title: "Situação", description: embryo.status)
+                Spacer()
+                if model.state.animal != nil {
+                    NavigationLink(
+                        destination: AnimalDetailView(animal: model.state.animal!),
+                        isActive: model.bindingOpenAnimalDetailView,
+                        label: {}
+                    )
+                }
+                
             }
-            .frame(maxWidth: .infinity)
             .padding()
-            .background(.gray)
-            .cornerRadius(12, corners: [.allCorners])
-            
-            TitleDescriptionView(title: "Receptora", description: embryo.receiver)
-                .padding(.top, 40)
-            TitleDescriptionView(title: "Data", description: embryo.date.getDateFromIsoDateString())
-            TitleDescriptionView(title: "Sexo", description: embryo.sex)
-            TitleDescriptionView(title: "Situação", description: embryo.status)
-            Spacer()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            AppProgressView(show: model.state.loading)
         }
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
     }
 }
 
