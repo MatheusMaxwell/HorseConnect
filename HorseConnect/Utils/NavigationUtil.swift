@@ -31,4 +31,11 @@ struct NavigationUtil {
         
         return nil
     }
+    
+    static func popBack(){
+        let navController = findNavigationController(viewController: UIApplication.shared.windows.filter { $0.isKeyWindow }.last?.rootViewController)
+        
+        navController?.navigationBar.isHidden = true
+        navController?.popViewController(animated: true)
+    }
 }

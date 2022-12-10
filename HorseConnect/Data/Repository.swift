@@ -171,4 +171,22 @@ class Repository: ObservableObject {
             complete(embryos)
         }
     }
+    
+    func deleteAnimalById(animalId: String, complete: @escaping () -> Void){
+        store.collection(animalsPath).document(animalId).delete(){ error in
+            if let err = error {
+                fatalError("Unable to delete animal: \(err.localizedDescription).")
+            }
+            complete()
+        }
+    }
+    
+    func deleteEmbryoById(embryoId: String, complete: @escaping () -> Void){
+        store.collection(embryosPath).document(embryoId).delete(){ error in
+            if let err = error {
+                fatalError("Unable to delete embryo: \(err.localizedDescription).")
+            }
+            complete()
+        }
+    }
 }

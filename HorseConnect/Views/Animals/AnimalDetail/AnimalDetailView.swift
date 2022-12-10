@@ -9,59 +9,87 @@ import SwiftUI
 
 struct AnimalDetailView: View {
     
+    @StateObject private var model = AnimalDetailViewModel()
     @State var animal: Animal
     @State var navigateToAnimalRegisterView = false
     @State var navigateToAnimalGenealogyView = false
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Image(systemName: "square.and.pencil")
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .onTapGesture {
-                    SingletonUtil.shared.animal = animal
-                    navigateToAnimalRegisterView.toggle()
+        ZStack{
+            VStack(alignment: .leading) {
+                Image(systemName: "trash.fill")
+                    .foregroundColor(Color.red)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .onTapGesture {
+                        model.showAlertDeleteToggle()
+                    }
+                    .padding(.bottom, 10)
+                Image(systemName: "square.and.pencil")
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .onTapGesture {
+                        SingletonUtil.shared.animal = animal
+                        navigateToAnimalRegisterView.toggle()
+                    }
+                Text(animal.name)
+                    .font(.system(size: 30))
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                CachedImageView(imageUrl: animal.imageUrl ?? "", width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.3)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                Group{
+                    TitleDescriptionView(title: "Nascimento:", description: animal.birthDate.getDateFromIsoDateString())
+                    TitleDescriptionView(title: "Idade:", description: animal.birthDate.getYearsDifference())
+                    TitleDescriptionView(title: "Sexo:", description: animal.sex)
+                    TitleDescriptionView(title: "Pelagem:", description: animal.coat)
+                    TitleDescriptionView(title: "Vivo:", description: animal.isLive ? "Sim" : "Não")
                 }
-            Text(animal.name)
-                .font(.system(size: 30))
-                .fontWeight(.bold)
-                .frame(maxWidth: .infinity, alignment: .center)
-            CachedImageView(imageUrl: animal.imageUrl ?? "", width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.3)
-                .frame(maxWidth: .infinity, alignment: .center)
-            Group{
-                TitleDescriptionView(title: "Nascimento:", description: animal.birthDate.getDateFromIsoDateString())
-                TitleDescriptionView(title: "Idade:", description: animal.birthDate.getYearsDifference())
-                TitleDescriptionView(title: "Sexo:", description: animal.sex)
-                TitleDescriptionView(title: "Pelagem:", description: animal.coat)
-                TitleDescriptionView(title: "Vivo:", description: animal.isLive ? "Sim" : "Não")
+                Spacer()
+                Button(action: {
+                    navigateToAnimalGenealogyView.toggle()
+                }) {
+                    Text("GENEALOGIA")
+                        .textPrimaryButtonStyle(isEnabled: true)
+                }
+                .primaryButtonStyle(isEnabled: true)
+                Group{
+                    NavigationLink(
+                        destination: AnimalGenealogyView(animal: animal),
+                        isActive: $navigateToAnimalGenealogyView,
+                        label: {}
+                    )
+                    NavigationLink(
+                        destination: AnimalsRegisterView(),
+                        isActive: $navigateToAnimalRegisterView,
+                        label: {}
+                    )
+                }
             }
-            Spacer()
-            Button(action: {
-                navigateToAnimalGenealogyView.toggle()
-            }) {
-                Text("GENEALOGIA")
-                    .textPrimaryButtonStyle(isEnabled: true)
-            }
-            .primaryButtonStyle(isEnabled: true)
-            Group{
-                NavigationLink(
-                    destination: AnimalGenealogyView(animal: animal),
-                    isActive: $navigateToAnimalGenealogyView,
-                    label: {}
+            .alert(isPresented: model.bindings.showAlertDelete){
+                Alert(
+                    title: Text("Deletar"),
+                    message: Text("Deseja realmente deletar?"),
+                    primaryButton: .default(Text("Sim")){
+                        if let animalId = animal.id {
+                            model.deleteAnimalById(animalId: animalId){
+                                self.dismiss()
+                            }
+                        }
+                    },
+                    secondaryButton: .destructive(Text("Não"))
                 )
-                NavigationLink(
-                    destination: AnimalsRegisterView(),
-                    isActive: $navigateToAnimalRegisterView,
-                    label: {}
-                )
-            } 
-        }
-        .onAppear{
-            if let anim = SingletonUtil.shared.animal {
-                self.animal = anim
             }
+            .onAppear{
+                if let anim = SingletonUtil.shared.animal {
+                    self.animal = anim
+                }
+            }
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
+            AppProgressView(show: model.state.loading)
         }
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
     }
     
     func titleDescription(title: String, description: String) -> some View{

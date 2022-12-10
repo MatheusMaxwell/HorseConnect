@@ -10,14 +10,22 @@ import SwiftUI
 struct EmbryoDetailView: View {
     var embryo: Embryo
     @StateObject private var model = EmbryoDetailViewModel()
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         ZStack{
             VStack(alignment: .leading){
+                Image(systemName: "trash.fill")
+                    .foregroundColor(Color.red)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .onTapGesture {
+                        model.showAlertDeleteToggle()
+                    }
+                    .padding(.bottom, 10)
                 Image(systemName: "square.and.pencil")
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .onTapGesture {
-                    
+                        
                     }
                     .padding(.bottom, 40)
                 HStack(alignment: .center){
@@ -49,21 +57,36 @@ struct EmbryoDetailView: View {
                 .padding()
                 .background(.gray)
                 .cornerRadius(12, corners: [.allCorners])
-                
-                TitleDescriptionView(title: "Receptora", description: embryo.receiver)
-                    .padding(.top, 40)
-                TitleDescriptionView(title: "Data", description: embryo.date.getDateFromIsoDateString())
-                TitleDescriptionView(title: "Sexo", description: embryo.sex)
-                TitleDescriptionView(title: "Situação", description: embryo.status)
+                Group{
+                    TitleDescriptionView(title: "Receptora", description: embryo.receiver)
+                        .padding(.top, 40)
+                    TitleDescriptionView(title: "Data", description: embryo.date.getDateFromIsoDateString())
+                    TitleDescriptionView(title: "Sexo", description: embryo.sex)
+                    TitleDescriptionView(title: "Situação", description: embryo.status)
+                }
                 Spacer()
                 if model.state.animal != nil {
                     NavigationLink(
                         destination: AnimalDetailView(animal: model.state.animal!),
-                        isActive: model.bindingOpenAnimalDetailView,
+                        isActive: model.bindings.openAnimalDetailView,
                         label: {}
                     )
                 }
                 
+            }
+            .alert(isPresented: model.bindings.showAlertDelete){
+                Alert(
+                    title: Text("Deletar"),
+                    message: Text("Deseja realmente deletar?"),
+                    primaryButton: .default(Text("Sim")){
+                        if let embryoId = embryo.id {
+                            model.deleteEmbryoById(embryoId: embryoId){
+                                self.dismiss()
+                            }
+                        }
+                    },
+                    secondaryButton: .destructive(Text("Não"))
+                )
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)

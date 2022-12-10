@@ -9,4 +9,5 @@ struct EmbryoDetailViewState {
     var loading = false
     var animal: Animal? = nil
     var openAnimalDetailView = false
+    var showAlertDelete = false
 }

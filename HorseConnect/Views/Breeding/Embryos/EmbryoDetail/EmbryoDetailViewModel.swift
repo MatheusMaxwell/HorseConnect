@@ -16,8 +16,19 @@ final class EmbryoDetailViewModel: ObservableObject {
         self.state = initialState
     }
     
-    var bindingOpenAnimalDetailView: Binding<Bool> {
-        Binding(to: \.state.openAnimalDetailView, on: self)
+    
+    var bindings: (
+        openAnimalDetailView: Binding<Bool>,
+        showAlertDelete: Binding<Bool>
+    ) {
+        (
+            openAnimalDetailView: Binding(to: \.state.openAnimalDetailView, on: self),
+            showAlertDelete: Binding(to: \.state.showAlertDelete, on: self)
+        )
+    }
+    
+    func showAlertDeleteToggle(){
+        self.state.showAlertDelete = true
     }
     
     func getAnimalById(animalId: String){
@@ -26,6 +37,14 @@ final class EmbryoDetailViewModel: ObservableObject {
             self.state.animal = animal
             self.state.openAnimalDetailView = true
             self.state.loading = false
+        }
+    }
+    
+    func deleteEmbryoById(embryoId: String, complete: @escaping () -> Void){
+        self.state.loading = true
+        repository.deleteEmbryoById(embryoId: embryoId){
+            self.state.loading = false
+            complete()
         }
     }
 }
