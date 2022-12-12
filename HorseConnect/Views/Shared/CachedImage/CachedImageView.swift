@@ -26,27 +26,40 @@ struct CachedImageView: View {
                 .cornerRadius(12, corners: [.allCorners])
         }
         else if imageUrl.isEmpty == false{
-            CachedAsyncImage(
-                url: URL(string: imageUrl),
-                content: { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: width, height: height)
-                        .cornerRadius(12, corners: [.allCorners])
-
-                },
-                placeholder: {
-                    Rectangle()
-                        .foregroundColor(Color.gray.opacity(0.4))
-                        .cornerRadius(6, corners: [.allCorners])
-                        .frame(width: width, height: height)
-                }
-            )
-            .frame(width: width, height: height)
-            .background(Color.gray.opacity(0.3))
-            .cornerRadius(12, corners: [.allCorners])
-            .padding(.top, 20)
+            if let imageLocal = ImageUtil.loadImageFromDocumentDirectory(fileName: imageUrl.components(separatedBy: "/").last!){
+                Image(uiImage: imageLocal)
+                    .resizable()
+                    .frame(width: width, height: height)
+                    .aspectRatio(contentMode: .fit)
+                    .background(Color.gray.opacity(0.4))
+                    .cornerRadius(12, corners: [.allCorners])
+            }
+            else{
+                CachedAsyncImage(
+                    url: URL(string: imageUrl),
+                    content: { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: width, height: height)
+                            .cornerRadius(12, corners: [.allCorners])
+                            .onAppear{
+                                ImageUtil.saveImageInDocumentDirectory(image: image.asUIImage(), fileName: imageUrl.components(separatedBy: "/").last!)
+                            }
+                    },
+                    placeholder: {
+                        Rectangle()
+                            .foregroundColor(Color.gray.opacity(0.4))
+                            .cornerRadius(6, corners: [.allCorners])
+                            .frame(width: width, height: height)
+                    }
+                )
+                .frame(width: width, height: height)
+                .background(Color.gray.opacity(0.3))
+                .cornerRadius(12, corners: [.allCorners])
+                .padding(.top, 20)
+            }
+            
         }
         else{
             Rectangle()

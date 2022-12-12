@@ -11,6 +11,9 @@
 		303BD1ED291D68B4007E43B3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303BD1EC291D68B4007E43B3 /* ProgressView.swift */; };
 		303F98432944CE0200D9FD31 /* AnimalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303F98422944CE0200D9FD31 /* AnimalDetailViewModel.swift */; };
 		303F98452944CE0F00D9FD31 /* AnimalDetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303F98442944CE0F00D9FD31 /* AnimalDetailViewState.swift */; };
+		303F98472946374F00D9FD31 /* URLCacheExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303F98462946374F00D9FD31 /* URLCacheExtensions.swift */; };
+		303F984929464EDF00D9FD31 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303F984829464EDF00D9FD31 /* ImageUtil.swift */; };
+		303F984C29465C6C00D9FD31 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 303F984B29465C6C00D9FD31 /* CachedAsyncImage */; };
 		3077DA20291DC85F002D6607 /* ToolbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA1D291DC85F002D6607 /* ToolbarViewModel.swift */; };
 		3077DA21291DC85F002D6607 /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA1E291DC85F002D6607 /* ToolbarView.swift */; };
 		3077DA22291DC85F002D6607 /* ToolbarViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077DA1F291DC85F002D6607 /* ToolbarViewState.swift */; };
@@ -57,6 +60,7 @@
 		30E21719292A6E06006435C2 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E21718292A6E06006435C2 /* StringExtensions.swift */; };
 		30E2171F292BFFCE006435C2 /* AnimalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E2171E292BFFCE006435C2 /* AnimalDetailView.swift */; };
 		30E21722292C0072006435C2 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E21721292C0072006435C2 /* CachedImageView.swift */; };
+		30ED83BF29466005009F495E /* UiImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED83BE29466005009F495E /* UiImageExtensions.swift */; };
 		30FD3B90292D012C00ABCE8E /* AnimalGenealogyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3B8F292D012C00ABCE8E /* AnimalGenealogyView.swift */; };
 		30FD3B92292D2BB600ABCE8E /* Geneology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3B91292D2BB600ABCE8E /* Geneology.swift */; };
 		30FD3B94292D336D00ABCE8E /* AnimalGenealogyViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3B93292D336D00ABCE8E /* AnimalGenealogyViewState.swift */; };
@@ -94,6 +98,8 @@
 		303BD1EC291D68B4007E43B3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		303F98422944CE0200D9FD31 /* AnimalDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewModel.swift; sourceTree = "<group>"; };
 		303F98442944CE0F00D9FD31 /* AnimalDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewState.swift; sourceTree = "<group>"; };
+		303F98462946374F00D9FD31 /* URLCacheExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCacheExtensions.swift; sourceTree = "<group>"; };
+		303F984829464EDF00D9FD31 /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		3077DA1D291DC85F002D6607 /* ToolbarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarViewModel.swift; sourceTree = "<group>"; };
 		3077DA1E291DC85F002D6607 /* ToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
 		3077DA1F291DC85F002D6607 /* ToolbarViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarViewState.swift; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 		30E21718292A6E06006435C2 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		30E2171E292BFFCE006435C2 /* AnimalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailView.swift; sourceTree = "<group>"; };
 		30E21721292C0072006435C2 /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
+		30ED83BE29466005009F495E /* UiImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiImageExtensions.swift; sourceTree = "<group>"; };
 		30FD3B8F292D012C00ABCE8E /* AnimalGenealogyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGenealogyView.swift; sourceTree = "<group>"; };
 		30FD3B91292D2BB600ABCE8E /* Geneology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geneology.swift; sourceTree = "<group>"; };
 		30FD3B93292D336D00ABCE8E /* AnimalGenealogyViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGenealogyViewState.swift; sourceTree = "<group>"; };
@@ -178,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30BB05AD8A596DAF5201755 /* Pods_HorseConnect.framework in Frameworks */,
+				303F984C29465C6C00D9FD31 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +317,8 @@
 				3077DA30291DFFC8002D6607 /* UIColorEtensions.swift */,
 				30E21718292A6E06006435C2 /* StringExtensions.swift */,
 				30FD3BC92938282900ABCE8E /* TimeIntervalExtensions.swift */,
+				303F98462946374F00D9FD31 /* URLCacheExtensions.swift */,
+				30ED83BE29466005009F495E /* UiImageExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -345,6 +355,7 @@
 				3077DA38291E8BE8002D6607 /* ColorUtil.swift */,
 				30E217162929DC5A006435C2 /* MultipleSelectionRow.swift */,
 				30FD3BA7292D600500ABCE8E /* NetworkMonitor.swift */,
+				303F984829464EDF00D9FD31 /* ImageUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -586,6 +597,9 @@
 			dependencies = (
 			);
 			name = HorseConnect;
+			packageProductDependencies = (
+				303F984B29465C6C00D9FD31 /* CachedAsyncImage */,
+			);
 			productName = HorseConnect;
 			productReference = 303BD1E9291D5C80007E43B3 /* HorseConnect.app */;
 			productType = "com.apple.product-type.application";
@@ -614,6 +628,9 @@
 				Base,
 			);
 			mainGroup = 30A21F82291D252A000EF7D4;
+			packageReferences = (
+				303F984A29465C6C00D9FD31 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = 30A21F82291D252A000EF7D4;
 			projectDirPath = "";
 			projectRoot = "";
@@ -720,6 +737,7 @@
 				30E2170A2929AB60006435C2 /* AnimalsListViewModel.swift in Sources */,
 				30FD3BA4292D549000ABCE8E /* FarmDataEntityExtensions.swift in Sources */,
 				30FD3BC429380EE200ABCE8E /* EmbryoRegisterViewState.swift in Sources */,
+				30ED83BF29466005009F495E /* UiImageExtensions.swift in Sources */,
 				3077DA37291E7460002D6607 /* HomeViewModel.swift in Sources */,
 				30A21FA6291D2760000EF7D4 /* SplashViewState.swift in Sources */,
 				30FD3BBA2938057A00ABCE8E /* EmbryoListViewState.swift in Sources */,
@@ -730,6 +748,7 @@
 				3077DA2F291DF9E1002D6607 /* FarmDataExtensions.swift in Sources */,
 				30FD3BD02938CDF800ABCE8E /* TitleDescriptionView.swift in Sources */,
 				30FD3B98292D380900ABCE8E /* GenealogyExtensions.swift in Sources */,
+				303F984929464EDF00D9FD31 /* ImageUtil.swift in Sources */,
 				30FD3B9F292D52AD00ABCE8E /* DataController.swift in Sources */,
 				30FD3BAC2936C1F700ABCE8E /* BreedingHomeView.swift in Sources */,
 				30FD3BA8292D600500ABCE8E /* NetworkMonitor.swift in Sources */,
@@ -757,6 +776,7 @@
 				30E217152929CC68006435C2 /* AnimalsRegisterViewModel.swift in Sources */,
 				30FD3BBC2938059800ABCE8E /* Embryo.swift in Sources */,
 				30FD3BC62938153700ABCE8E /* EmbryoExtensions.swift in Sources */,
+				303F98472946374F00D9FD31 /* URLCacheExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -976,6 +996,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		303F984A29465C6C00D9FD31 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		303F984B29465C6C00D9FD31 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 303F984A29465C6C00D9FD31 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		30FD3B99292D508A00ABCE8E /* HorseConnectDB.xcdatamodeld */ = {

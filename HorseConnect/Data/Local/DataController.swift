@@ -29,6 +29,7 @@ class DataController: ObservableObject{
     
     
     func saveFarmData(farmData: FarmData){
+        ImageUtil.removeAllImages()
         let userId = SingletonUtil.shared.userUid
         do{
             farmData.toEntity(context: container.viewContext, id: userId)
@@ -71,6 +72,7 @@ class DataController: ObservableObject{
     }
    
     func saveAnimals (animals: [Animal]) {
+        ImageUtil.removeAllImages()
         animals.forEach{
             $0.toEntity(context: container.viewContext)
         }
@@ -126,6 +128,7 @@ class DataController: ObservableObject{
         clearAllDataFromAnimalEntity()
         clearAllDataFromFarmDataEntity()
         clearAllDataFromGenealogyEntity()
+        ImageUtil.removeAllImages()
     }
     
     private func clearAllDataFromAnimalEntity(){

@@ -114,7 +114,7 @@ class AnimalsRegisterViewModel: ObservableObject {
         let imageId = UUID().uuidString
         DispatchQueue.main.async {
             let childRef = self.storage.reference().child("animals/" + imageId + ".png")
-            if let data = self.state.imageSelected?.pngData() {
+            if let data = self.state.imageSelected?.jpegData(compressionQuality: 0.3)  {
                 _ = childRef.putData(data, metadata: nil) { (metadata, error) in
                     guard let metadata = metadata else {
                         complete("", "")

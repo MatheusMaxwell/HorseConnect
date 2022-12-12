@@ -12,12 +12,8 @@ struct HomeView: View {
     @StateObject private var model = HomeViewModel()
     @State var navigateToAnimalsHome = false
     @State var navigateToBreedingHome = false
+    private var monitor = NetworkMonitor()
     
-    init() {
-        URLCache.shared.memoryCapacity = 10_000_000 // ~10 MB memory space
-        URLCache.shared.diskCapacity = 1_000_000_000 // ~1GB disk cache space
-    }
-
     var body: some View {
         ZStack{
             ColorUtil
@@ -33,12 +29,19 @@ struct HomeView: View {
                         content: { image in
                             image
                                 .resizable()
-                                .frame(maxWidth: UIScreen.main.bounds.size.width*0.8, maxHeight: .infinity)
                                 .aspectRatio(contentMode: .fit)
-                                
                         },
                         placeholder: {
-                            ProgressView()
+                            if monitor.isConnected {
+                                ProgressView()
+                            }
+                            else{
+                                Text(model.state.farmData!.farmName)
+                                    .font(.system(size: 25))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                            }
+                            
                         }
                     )
                     .padding(.top, 20)
