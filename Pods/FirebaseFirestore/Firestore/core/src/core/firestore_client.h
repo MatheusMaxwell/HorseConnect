@@ -48,6 +48,8 @@ class QueryEngine;
 
 namespace model {
 class Mutation;
+class FieldIndex;
+class AggregateField;
 }  // namespace model
 
 namespace remote {
@@ -151,6 +153,13 @@ class FirestoreClient : public std::enable_shared_from_this<FirestoreClient> {
                    TransactionResultCallback result_callback);
 
   /**
+   * Executes a count query using the given query as the base.
+   */
+  void RunAggregateQuery(const Query& query,
+                         const std::vector<model::AggregateField>& aggregates,
+                         api::AggregateQueryCallback&& result_callback);
+
+  /**
    * Adds a listener to be called when a snapshots-in-sync event fires.
    */
   void AddSnapshotsInSyncListener(
@@ -176,6 +185,12 @@ class FirestoreClient : public std::enable_shared_from_this<FirestoreClient> {
     return user_executor_;
   }
 
+  void ConfigureFieldIndexes(std::vector<model::FieldIndex> parsed_indexes);
+
+  void SetIndexAutoCreationEnabled(bool is_enabled) const;
+
+  void DeleteAllFieldIndexes();
+
   void LoadBundle(std::unique_ptr<util::ByteStream> bundle_data,
                   std::shared_ptr<api::LoadBundleTask> result_task);
 
@@ -200,11 +215,21 @@ class FirestoreClient : public std::enable_shared_from_this<FirestoreClient> {
 
   void Initialize(const credentials::User& user, const api::Settings& settings);
 
-  void VerifyNotTerminated();
+  void VerifyNotTerminated() const;
 
   void TerminateInternal();
 
+  /**
+   * Schedules a callback to try running LRU garbage collection. Reschedules
+   * itself after the GC has run.
+   */
   void ScheduleLruGarbageCollection();
+
+  /**
+   * Schedules a callback to try running index backfiller. Reschedules
+   * itself after the backfiller has run.
+   */
+  void ScheduleIndexBackfiller();
 
   DatabaseInfo database_info_;
   std::shared_ptr<credentials::AppCheckCredentialsProvider>
@@ -231,12 +256,12 @@ class FirestoreClient : public std::enable_shared_from_this<FirestoreClient> {
   std::unique_ptr<SyncEngine> sync_engine_;
   std::unique_ptr<EventManager> event_manager_;
 
-  std::chrono::milliseconds initial_gc_delay_ = std::chrono::minutes(1);
-  std::chrono::milliseconds regular_gc_delay_ = std::chrono::minutes(5);
   bool gc_has_run_ = false;
+  bool backfiller_has_run_ = false;
   bool credentials_initialized_ = false;
   local::LruDelegate* _Nullable lru_delegate_;
   util::DelayedOperation lru_callback_;
+  util::DelayedOperation backfiller_callback_;
 };
 
 }  // namespace core

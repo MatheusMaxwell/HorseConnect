@@ -12,18 +12,20 @@ struct ImageUtil {
     
     public static func saveImageInDocumentDirectory(image: UIImage, fileName: String){
         if loadImageFromDocumentDirectory(fileName: fileName) == nil {
-            let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!;
-            let fileURL = documentsUrl.appendingPathComponent(fileName)
+            let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(fileName)
             if let imageData = image.pngData() {
-                try? imageData.write(to: fileURL, options: .atomic)
+                do {
+                    try imageData.write(to: fileURL, options: .atomic)
+                } catch {
+                    print(error)
+                }
             }
         }
     }
     
     public static func loadImageFromDocumentDirectory(fileName: String) -> UIImage? {
         
-        let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!;
-        let fileURL = documentsUrl.appendingPathComponent(fileName)
+        let fileURL = getDocumentsDiretory().appendingPathComponent(fileName)
         do {
             let imageData = try Data(contentsOf: fileURL)
             return UIImage(data: imageData)
@@ -33,12 +35,17 @@ struct ImageUtil {
     
     public static func removeAllImages() {
         let fileManager = FileManager.default
-        let myDocuments = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let myDocuments = getDocumentsDiretory()
         do {
             try fileManager.removeItem(at: myDocuments)
         } catch {
             return
         }
+    }
+    
+    public static func getDocumentsDiretory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
     }
     
 }

@@ -26,7 +26,7 @@ struct CachedImageView: View {
                 .cornerRadius(12, corners: [.allCorners])
         }
         else if imageUrl.isEmpty == false{
-            if let imageLocal = ImageUtil.loadImageFromDocumentDirectory(fileName: imageUrl.components(separatedBy: "/").last!){
+            if let imageLocal = ImageUtil.loadImageFromDocumentDirectory(fileName: imageUrl.fileName()){
                 Image(uiImage: imageLocal)
                     .resizable()
                     .frame(width: width, height: height)
@@ -44,7 +44,7 @@ struct CachedImageView: View {
                             .frame(width: width, height: height)
                             .cornerRadius(12, corners: [.allCorners])
                             .onAppear{
-                                ImageUtil.saveImageInDocumentDirectory(image: image.asUIImage(), fileName: imageUrl.components(separatedBy: "/").last!)
+                                ImageUtil.saveImageInDocumentDirectory(image: image.asUIImage(), fileName: imageUrl.fileName())
                             }
                     },
                     placeholder: {

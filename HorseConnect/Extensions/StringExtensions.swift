@@ -49,4 +49,8 @@ extension String {
         }
         return ""
     }
+    
+    func fileName() -> String {
+        return (self.components(separatedBy: "%").last?.components(separatedBy: "?").first!) ?? ""
+    }
 }

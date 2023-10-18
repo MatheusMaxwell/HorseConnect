@@ -19,7 +19,9 @@
 
 #include <string>
 
+#include "Firestore/core/src/model/document_key.h"
 #include "Firestore/core/src/model/model_fwd.h"
+#include "Firestore/core/src/model/overlay.h"
 
 namespace firebase {
 namespace firestore {
@@ -31,6 +33,7 @@ class Query;
 namespace local {
 
 class IndexManager;
+class QueryContext;
 
 /**
  * Represents cached documents received from the remote backend.
@@ -66,7 +69,7 @@ class RemoteDocumentCache {
    * @return The cached Document or DeletedDocument entry, or nullopt if we
    * have nothing cached.
    */
-  virtual model::MutableDocument Get(const model::DocumentKey& key) = 0;
+  virtual model::MutableDocument Get(const model::DocumentKey& key) const = 0;
 
   /**
    * Looks up a set of entries in the cache.
@@ -76,7 +79,7 @@ class RemoteDocumentCache {
    * entry is not cached, the corresponding key will be mapped to a null value.
    */
   virtual model::MutableDocumentMap GetAll(
-      const model::DocumentKeySet& keys) = 0;
+      const model::DocumentKeySet& keys) const = 0;
 
   /**
    * Looks up the next "limit" number of documents for a collection group based
@@ -100,13 +103,46 @@ class RemoteDocumentCache {
    *
    * Cached DeletedDocument entries have no bearing on query results.
    *
-   * @param path The collection path to match documents against.
+   * @param query The query to match documents against.
    * @param offset The read time and document key to start scanning at
    * (exclusive).
+   * @param limit The maximum number of results to return.
+   * If the limit is not defined, returns all matching documents.
+   * @param mutated_docs The documents with local mutations, they are read
+   * regardless if the remote version matches the given query.
    * @return The set of matching documents.
    */
-  virtual model::MutableDocumentMap GetAll(
-      const model::ResourcePath& path, const model::IndexOffset& offset) = 0;
+  virtual model::MutableDocumentMap GetDocumentsMatchingQuery(
+      const core::Query& query,
+      const model::IndexOffset& offset,
+      absl::optional<size_t> limit = absl::nullopt,
+      const model::OverlayByDocumentKeyMap& mutated_docs = {}) const = 0;
+
+  /**
+   * Executes a query against the cached Document entries
+   *
+   * Implementations may return extra documents if convenient. The results
+   * should be re-filtered by the consumer before presenting them to the user.
+   *
+   * Cached DeletedDocument entries have no bearing on query results.
+   *
+   * @param query The query to match documents against.
+   * @param offset The read time and document key to start scanning at
+   * (exclusive).
+   * @param context A optional tracker to keep a record of important details
+   * during database local query execution.
+   * @param limit The maximum number of results to return.
+   * If the limit is not defined, returns all matching documents.
+   * @param mutated_docs The documents with local mutations, they are read
+   * regardless if the remote version matches the given query.
+   * @return The set of matching documents.
+   */
+  virtual model::MutableDocumentMap GetDocumentsMatchingQuery(
+      const core::Query& query,
+      const model::IndexOffset& offset,
+      absl::optional<QueryContext>& context,
+      absl::optional<size_t> limit = absl::nullopt,
+      const model::OverlayByDocumentKeyMap& mutated_docs = {}) const = 0;
 
   /**
    * Sets the index manager used by remote document cache.

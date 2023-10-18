@@ -176,6 +176,7 @@
 		30FD3BD32939103800ABCE8E /* EmbryoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoDetailViewModel.swift; sourceTree = "<group>"; };
 		30FD3BD52939106300ABCE8E /* EmbryoDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoDetailViewState.swift; sourceTree = "<group>"; };
 		6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HorseConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9B6519B2AE067EC00BF682D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C44592FF27BA547647D81A38 /* Pods-HorseConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorseConnect.debug.xcconfig"; path = "Target Support Files/Pods-HorseConnect/Pods-HorseConnect.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,6 +261,7 @@
 		30A21F82291D252A000EF7D4 = {
 			isa = PBXGroup;
 			children = (
+				A9B6519B2AE067EC00BF682D /* .gitignore */,
 				30FD3B99292D508A00ABCE8E /* HorseConnectDB.xcdatamodeld */,
 				30A21F8D291D252A000EF7D4 /* HorseConnect */,
 				79B19AAADF55B0F5B85C1038 /* Pods */,
