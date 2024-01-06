@@ -88,6 +88,9 @@
 		30FD3BD02938CDF800ABCE8E /* TitleDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BCF2938CDF800ABCE8E /* TitleDescriptionView.swift */; };
 		30FD3BD42939103800ABCE8E /* EmbryoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BD32939103800ABCE8E /* EmbryoDetailViewModel.swift */; };
 		30FD3BD62939106300ABCE8E /* EmbryoDetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BD52939106300ABCE8E /* EmbryoDetailViewState.swift */; };
+		A90E3C542B48FCA800847175 /* ItemHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C532B48FCA800847175 /* ItemHeaderView.swift */; };
+		A9B6519D2AE0BB8B00BF682D /* ImageViewCached.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B6519C2AE0BB8B00BF682D /* ImageViewCached.swift */; };
+		A9B651A02AE0BBB700BF682D /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B6519F2AE0BBB700BF682D /* ImageManager.swift */; };
 		B30BB05AD8A596DAF5201755 /* Pods_HorseConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */; };
 /* End PBXBuildFile section */
 
@@ -176,7 +179,10 @@
 		30FD3BD32939103800ABCE8E /* EmbryoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoDetailViewModel.swift; sourceTree = "<group>"; };
 		30FD3BD52939106300ABCE8E /* EmbryoDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoDetailViewState.swift; sourceTree = "<group>"; };
 		6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HorseConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90E3C532B48FCA800847175 /* ItemHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHeaderView.swift; sourceTree = "<group>"; };
 		A9B6519B2AE067EC00BF682D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A9B6519C2AE0BB8B00BF682D /* ImageViewCached.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCached.swift; sourceTree = "<group>"; };
+		A9B6519F2AE0BBB700BF682D /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		C44592FF27BA547647D81A38 /* Pods-HorseConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorseConnect.debug.xcconfig"; path = "Target Support Files/Pods-HorseConnect/Pods-HorseConnect.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,6 +212,8 @@
 		303BD1EA291D689F007E43B3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A90E3C522B48FC8300847175 /* ItemHeader */,
+				A9B6519E2AE0BB9600BF682D /* ImageViewCached */,
 				30FD3BCE2938CDE800ABCE8E /* TitleDescription */,
 				30FD3BAD2936C47C00ABCE8E /* CardViewRow */,
 				30E21720292C0064006435C2 /* CachedImage */,
@@ -581,6 +589,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A90E3C522B48FC8300847175 /* ItemHeader */ = {
+			isa = PBXGroup;
+			children = (
+				A90E3C532B48FCA800847175 /* ItemHeaderView.swift */,
+			);
+			path = ItemHeader;
+			sourceTree = "<group>";
+		};
+		A9B6519E2AE0BB9600BF682D /* ImageViewCached */ = {
+			isa = PBXGroup;
+			children = (
+				A9B6519C2AE0BB8B00BF682D /* ImageViewCached.swift */,
+				A9B6519F2AE0BBB700BF682D /* ImageManager.swift */,
+			);
+			path = ImageViewCached;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -746,10 +771,13 @@
 				30A21FBD291D2BB4000EF7D4 /* LoginViewModel.swift in Sources */,
 				30E217172929DC5A006435C2 /* MultipleSelectionRow.swift in Sources */,
 				30A21FBB291D2BAB000EF7D4 /* LoginViewState.swift in Sources */,
+				A9B6519D2AE0BB8B00BF682D /* ImageViewCached.swift in Sources */,
 				30A21F8F291D252A000EF7D4 /* HorseConnectApp.swift in Sources */,
+				A9B651A02AE0BBB700BF682D /* ImageManager.swift in Sources */,
 				3077DA2F291DF9E1002D6607 /* FarmDataExtensions.swift in Sources */,
 				30FD3BD02938CDF800ABCE8E /* TitleDescriptionView.swift in Sources */,
 				30FD3B98292D380900ABCE8E /* GenealogyExtensions.swift in Sources */,
+				A90E3C542B48FCA800847175 /* ItemHeaderView.swift in Sources */,
 				303F984929464EDF00D9FD31 /* ImageUtil.swift in Sources */,
 				30FD3B9F292D52AD00ABCE8E /* DataController.swift in Sources */,
 				30FD3BAC2936C1F700ABCE8E /* BreedingHomeView.swift in Sources */,

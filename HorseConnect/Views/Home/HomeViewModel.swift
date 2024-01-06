@@ -89,9 +89,10 @@ final class HomeViewModel: ObservableObject{
                             self.state.loading = false
                             return
                         }
-                        self.state.loading = false
                         self.state.farmData?.imageLogoUrl = url?.description ?? ""
-                        self.state.showSheetEdit = false
+                        if let farmData = self.state.farmData {
+                            self.updateFarmData(farmData: farmData)
+                        }
                     }
                 }
             }
@@ -104,10 +105,7 @@ final class HomeViewModel: ObservableObject{
         DispatchQueue.main.async {
             self.state.farmData?.farmName = self.state.farmName
             if let farmData = self.state.farmData {
-                self.repository.addFarmData(farmData: farmData, userId: SingletonUtil.shared.userUid){
-                    self.state.loading = false
-                    self.state.showSheetEdit = false
-                }
+                self.updateFarmData(farmData: farmData)
             }
             
         }
@@ -120,12 +118,15 @@ final class HomeViewModel: ObservableObject{
                 self.state.farmData?.primaryColor = color
             }
             if let farmData = self.state.farmData {
-                self.repository.addFarmData(farmData: farmData, userId: SingletonUtil.shared.userUid){
-                    self.state.loading = false
-                    self.state.showSheetEdit = false
-                }
+                self.updateFarmData(farmData: farmData)
             }
-            
+        }
+    }
+    
+    private func updateFarmData(farmData: FarmData) {
+        self.repository.addFarmData(farmData: farmData, userId: SingletonUtil.shared.userUid){
+            self.state.loading = false
+            self.state.showSheetEdit = false
         }
     }
     

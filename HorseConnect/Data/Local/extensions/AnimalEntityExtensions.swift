@@ -5,6 +5,8 @@
 //  Created by Matheus Maxwell Meireles on 22/11/22.
 //
 
+import Foundation
+
 extension AnimalEntity {
     
     func toAnimal() -> Animal {
@@ -16,8 +18,8 @@ extension AnimalEntity {
 extension [AnimalEntity]{
     
     func toAnimals() -> [Animal] {
-        return self.map{
-            $0.toAnimal()
+        return self.map { anim in
+            anim.toAnimal()
         }
     }
     

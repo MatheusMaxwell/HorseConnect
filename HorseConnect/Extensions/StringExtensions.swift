@@ -50,6 +50,15 @@ extension String {
         return ""
     }
     
+    func getMonths() -> String {
+        let newFormatter = ISO8601DateFormatter()
+        if let birthDate = newFormatter.date(from: self){
+            let months = Int(birthDate.timeIntervalSinceNow.asMonths()) * -1
+            return "\(months) mes(es)"
+        }
+        return ""
+    }
+    
     func fileName() -> String {
         return (self.components(separatedBy: "%").last?.components(separatedBy: "?").first!) ?? ""
     }

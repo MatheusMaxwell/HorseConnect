@@ -27,27 +27,7 @@ struct BreedingHomeView: View {
                 .getPrimaryColor(farmData: farmData)
                 .ignoresSafeArea(.all)
             VStack{
-                HStack{
-                    Image(systemName: "arrow.left")
-                        .foregroundColor(.white)
-                        .padding(.leading)
-                        .onTapGesture {
-                            self.dismiss()
-                        }
-                    Spacer()
-                    Image("StationCardHome")
-                        .resizable()
-                        .frame(width: 100, height: 80)
-                        .aspectRatio(contentMode: .fit)
-                    Text("Estação")
-                        .font(.system(size: 30))
-                        .fontWeight(.bold)
-                        .padding(.top)
-                        .foregroundColor(.white)
-                    Spacer()
-                }
-                
-                
+                ItemHeaderView(imageName: "StationCardHome", title: "Estação", dismiss: { self.dismiss() })
                 VStack{
                     List{
                         CardViewRow(imagePath: "embryo", title: "Embriões", farmData: farmData){

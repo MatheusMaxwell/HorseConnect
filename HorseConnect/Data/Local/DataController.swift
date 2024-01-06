@@ -15,6 +15,7 @@ class DataController: ObservableObject{
     private let farmDataEntityName = "FarmDataEntity"
     private let genealogyEntityName = "GenealogyEntity"
     private let embryoEntityName = "EmbryoEntity"
+    private let imagesEntityName = "ImagesEntity"
     
     
     init() {
@@ -50,8 +51,28 @@ class DataController: ObservableObject{
     
     func getAnimals() -> [Animal]{
         do {
-            
             return try container.viewContext.fetch(NSFetchRequest<AnimalEntity>(entityName: animalEntityName)).toAnimals()
+        } catch let error as NSError{
+            print(error)
+            return []
+        }
+    }
+    
+    func saveImage (image: Data?, imageUrl: String) {
+        let imageEntity = ImagesEntity(context: container.viewContext)
+        imageEntity.image = image
+        imageEntity.imagePath = imageUrl
+        do{
+            try container.viewContext.save()
+        } catch let error as NSError {
+            print(error)
+        }
+    }
+    
+    func getImages() -> [ImagesEntity] {
+        do {
+            
+            return try container.viewContext.fetch(NSFetchRequest<ImagesEntity>(entityName: imagesEntityName))
         } catch let error as NSError{
             print(error)
             return []
@@ -63,6 +84,7 @@ class DataController: ObservableObject{
             let request = NSFetchRequest<AnimalEntity>(entityName: animalEntityName)
             request.predicate = NSPredicate(format: "%K == %@", "id", id)
             let animal: [AnimalEntity] = try container.viewContext.fetch(request)
+            let images = getImages()
             return animal.first?.toAnimal()
         } catch let error as NSError {
             print(error)

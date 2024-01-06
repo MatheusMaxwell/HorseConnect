@@ -84,29 +84,27 @@ class AnimalsRegisterViewModel: ObservableObject {
         if(imageIdCopy.isEmpty){
             imageIdCopy = UUID().uuidString
         }
-        DispatchQueue.main.async {
-            let childRef = self.storage.reference().child("animals/" + imageIdCopy + ".png")
-            if let data = self.state.imageSelected?.jpegData(compressionQuality: 0.3) {
-                _ = childRef.putData(data, metadata: nil) { (metadata, error) in
-                    guard let metadata = metadata else {
+       
+        let childRef = self.storage.reference().child("animals/" + imageIdCopy + ".png")
+        if let data = self.state.imageSelected?.jpegData(compressionQuality: 0.3) {
+            _ = childRef.putData(data, metadata: nil) { (metadata, error) in
+                guard let metadata = metadata else {
+                    complete("", "")
+                    return
+                }
+                _ = metadata.size
+                childRef.downloadURL { (url, error) in
+                    guard url != nil else {
                         complete("", "")
                         return
                     }
-                    _ = metadata.size
-                    childRef.downloadURL { (url, error) in
-                        guard url != nil else {
-                            complete("", "")
-                            return
-                        }
-                        
-                        complete(imageIdCopy, url?.description ?? "")
-                    }
+                    
+                    complete(imageIdCopy, url?.description ?? "")
                 }
             }
-            else{
-                complete("", "")
-            }
-            
+        }
+        else{
+            complete(imageId, SingletonUtil.shared.animal?.imageUrl ?? "")
         }
     }
     

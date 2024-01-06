@@ -42,7 +42,9 @@ struct ImagePicker: UIViewControllerRepresentable {
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                parent.selectedImage = image
+                if let data = image.jpegData(compressionQuality: 0.3) {
+                    parent.selectedImage = UIImage(data: data)
+                }
             }
 
             parent.presentationMode.wrappedValue.dismiss()

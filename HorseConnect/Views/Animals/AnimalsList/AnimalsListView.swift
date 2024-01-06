@@ -63,13 +63,17 @@ struct AnimalsListView: View {
                             NavigationLink(destination: AnimalDetailView(animal: animal)
                                 .navigationViewStyle(.stack)) {
                                     HStack{
-                                        CachedImageView(imageUrl: animal.imageUrl ?? "", width: 50, height: 50)
+                                        ImageViewCached(
+                                            url: URL(string:animal.imageUrl ?? "")
+                                        )
+                                        .frame(width: 50, height: 50)
                                         VStack(alignment: .leading){
                                             Text(animal.name)
                                             Text(animal.birthDate.getDateFromIsoDateString())
                                                 .font(.system(size: 15))
                                                 .foregroundColor(.black.opacity(0.6))
                                         }
+                                        .padding(.leading)
                                     }
                             }
                             

@@ -24,76 +24,38 @@ struct AnimalsHomeView: View {
                 .getPrimaryColor(farmData: farmData)
                 .ignoresSafeArea(.all)
             VStack{
-                HStack{
-                    Image(systemName: "arrow.left")
-                        .foregroundColor(.white)
-                        .padding(.leading)
-                        .onTapGesture {
-                            self.dismiss()
+                ItemHeaderView(imageName: "HorseCardHome", title: "Plantel", dismiss: { self.dismiss() })
+                VStack {
+                    List {
+                        CardViewRow(imagePath: "garanhao", title: "Garanhões", farmData: farmData){
+                            self.navigate(animalType: AnimalType.stallion)
                         }
-                    Spacer()
-                    Image("HorseCardHome")
-                        .resizable()
-                        .frame(width: 100, height: 80)
-                        .aspectRatio(contentMode: .fit)
-                    Text("Plantel")
-                        .font(.system(size: 30))
-                        .fontWeight(.bold)
-                        .padding(.top)
-                        .foregroundColor(.white)
-                    Spacer()
-                }
-                VStack{
-                    List{
-                        VStack(alignment: .leading){
-                            HStack{
-                                CardView(imagePath: "garanhao", title: "Garanhões", farmData: farmData){
-                                    self.navigate(animalType: AnimalType.stallion)
-                                }
-                                    .padding(.trailing, 5)
-                                    
-                                CardView(imagePath: "doadoras", title: "Doadoras\nMatrizes", farmData: farmData){
-                                    self.navigate(animalType: AnimalType.donor)
-                                }
-                                    .padding(.leading, 5)
-                                    
+                        CardViewRow(imagePath: "doadoras", title: "Doadoras\nMatrizes", farmData: farmData){
+                            self.navigate(animalType: AnimalType.donor)
+                        }
 
-                            }
-                            HStack{
-                                CardView(imagePath: "potro", title: "Potros", farmData: farmData){
-                                    self.navigate(animalType: AnimalType.foal)
-                                }
-                                    .padding(.trailing, 5)
-                                    .padding(.top)
-                                CardView(imagePath: "competidores", title: "Competidores", farmData: farmData){
-                                    self.navigate(animalType: AnimalType.competitors)
-                                }
-                                    .padding(.leading, 5)
-                                    .padding(.top)
-                                   
-                            }
-                            HStack{
-                                CardView(imagePath: "promessas", title: "Promessas", farmData: farmData){
-                                    self.navigate(animalType: AnimalType.promises)
-                                }
-                                    .padding(.trailing, 5)
-                                    .padding(.top)
-                                CardView(imagePath: "castrado", title: "Castrados", farmData: farmData){
-                                    self.navigate(animalType: AnimalType.gelding)
-                                }
-                                    .padding(.leading, 5)
-                                    .padding(.top)
+                    
+                    
+                        CardViewRow(imagePath: "potro", title: "Potros", farmData: farmData){
+                            self.navigate(animalType: AnimalType.foal)
+                        }
+                        CardViewRow(imagePath: "competidores", title: "Competidores", farmData: farmData){
+                            self.navigate(animalType: AnimalType.competitors)
+                        }
+                           
+                    
+                    
+                        CardViewRow(imagePath: "promessas", title: "Promessas", farmData: farmData){
+                            self.navigate(animalType: AnimalType.promises)
+                        }
+                        CardViewRow(imagePath: "castrado", title: "Castrados", farmData: farmData){
+                            self.navigate(animalType: AnimalType.gelding)
+                        }
 
-                            }
-                            HStack{
-                                CardView(imagePath: "receptoras", title: "Receptoras", farmData: farmData){
-                                    self.navigate(animalType: AnimalType.receivers)
-                                }
-                                    .padding(.trailing, 5)
-                                    .padding(.top)
-                            }
-
-
+                    
+                    
+                        CardViewRow(imagePath: "receptoras", title: "Receptoras", farmData: farmData){
+                            self.navigate(animalType: AnimalType.receivers)
                         }
                     }
                     .listStyle(.plain)

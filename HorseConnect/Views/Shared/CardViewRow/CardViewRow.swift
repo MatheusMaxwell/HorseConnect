@@ -19,18 +19,19 @@ struct CardViewRow: View {
             Image(imagePath)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .frame(width: 50, height: 50)
                 .padding()
             Text(title)
-                .font(.system(size: 30))
+                .font(.system(size: 24))
                 .foregroundColor(.white)
             Spacer()
-        }
-        .onTapGesture {
-            onTapGesture()
         }
         .frame(width: size*0.9, height: size*0.25)
         .background(ColorUtil.getPrimaryColor(farmData: farmData))
         .cornerRadius(12, corners: [.topLeft, .topRight, .bottomLeft, .bottomRight])
+        .onTapGesture {
+            onTapGesture()
+        }
     }
 }
 

@@ -5,6 +5,8 @@
 //  Created by Matheus Maxwell Meireles on 19/11/22.
 //
 
+import Foundation
+
 struct Animal : Identifiable, Hashable {
     var id: String?
     var name: String

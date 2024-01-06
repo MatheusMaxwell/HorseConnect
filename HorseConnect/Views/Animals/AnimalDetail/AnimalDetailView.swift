@@ -35,11 +35,12 @@ struct AnimalDetailView: View {
                     .font(.system(size: 30))
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .center)
-                CachedImageView(imageUrl: animal.imageUrl ?? "", width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.3)
+                CachedImageView(imageUrl: animal.imageUrl ?? "", width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.25)
                     .frame(maxWidth: .infinity, alignment: .center)
                 Group{
                     TitleDescriptionView(title: "Nascimento:", description: animal.birthDate.getDateFromIsoDateString())
                     TitleDescriptionView(title: "Idade:", description: animal.birthDate.getYearsDifference())
+                    TitleDescriptionView(title: "Meses:", description: animal.birthDate.getMonths())
                     TitleDescriptionView(title: "Sexo:", description: animal.sex)
                     TitleDescriptionView(title: "Pelagem:", description: animal.coat)
                     TitleDescriptionView(title: "Vivo:", description: animal.isLive ? "Sim" : "Não")

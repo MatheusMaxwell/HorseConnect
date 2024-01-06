@@ -27,10 +27,11 @@ struct ImageUtil {
         
         let fileURL = getDocumentsDiretory().appendingPathComponent(fileName)
         do {
-            let imageData = try Data(contentsOf: fileURL)
-            return UIImage(data: imageData)
-        } catch {}
-        return nil
+            if let imageData = try? Data(contentsOf: fileURL) {
+                return UIImage(data: imageData)
+            }
+            return nil
+        }
     }
     
     public static func removeAllImages() {

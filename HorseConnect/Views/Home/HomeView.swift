@@ -45,7 +45,7 @@ struct HomeView: View {
                         }
                     )
                     .padding(.top, 20)
-                    .frame(height: 100)
+                    .frame(height: 180)
                 }
                 Text(model.state.farmData?.farmName ?? "")
                     .font(.system(size: 30))
@@ -66,7 +66,6 @@ struct HomeView: View {
                     .accentColor(ColorUtil.getPrimaryColor(farmData: model.state.farmData))
                 }
                 .frame(maxWidth: .infinity)
-                .frame(height: UIScreen.main.bounds.size.height*0.75)
                 .background(.white)
                 .cornerRadius(12, corners: [.topLeft, .topRight])
 
@@ -95,34 +94,21 @@ struct HomeView: View {
     }
     
     var homeViewCards: some View {
-        VStack{
-            HStack{
-                CardView(imagePath: "HorseCardHome", title: "Plantel", farmData: model.state.farmData){
-                    navigateToAnimalsHome.toggle()
-                }
-                    .padding(.trailing, 5)
-                    .padding(.bottom)
-                CardView(imagePath: "StationCardHome", title: "Estação", farmData: model.state.farmData){
-                    navigateToBreedingHome.toggle()
-                }
-                    .padding(.leading, 5)
-                    .padding(.bottom)
-
+        List {
+            CardViewRow(imagePath: "HorseCardHome", title: "Plantel", farmData: model.state.farmData){
+                navigateToAnimalsHome.toggle()
             }
-            .padding()
-            HStack{
-                CardView(imagePath: "VaccineCardHome", title: "Vacinação", farmData: model.state.farmData){
-                    
-                }
-                    .padding(.trailing, 5)
-                    .padding(.top)
-                CardView(imagePath: "FinanceCardHome", title: "Financeiro", farmData: model.state.farmData){
-                    
-                }
-                    .padding(.leading, 5)
-                    .padding(.top)
+            CardViewRow(imagePath: "StationCardHome", title: "Estação", farmData: model.state.farmData){
+                navigateToBreedingHome.toggle()
+            }
+
+            CardViewRow(imagePath: "VaccineCardHome", title: "Vacinação", farmData: model.state.farmData){
+            }
+            CardViewRow(imagePath: "FinanceCardHome", title: "Financeiro", farmData: model.state.farmData){
+            
             }
         }
+        .listStyle(.plain)
     }
     
     var settingsView: some View {
@@ -204,18 +190,10 @@ struct HomeView: View {
                 .aspectRatio(contentMode: .fit)
         }
         else{
-            CachedAsyncImage(
-                url: URL(string: model.state.farmData!.imageLogoUrl),
-                content: { image in
-                    image
-                        .resizable()
-                        .frame(maxWidth: UIScreen.main.bounds.size.width*0.8, maxHeight: .infinity)
-                        .aspectRatio(contentMode: .fit)
-
-                },
-                placeholder: {
-                    ProgressView()
-                }
+            CachedImageView(
+                imageUrl: model.state.farmData!.imageLogoUrl,
+                width: UIScreen.main.bounds.size.width*0.8,
+                height: UIScreen.main.bounds.size.height*0.3
             )
         }
     }
@@ -223,7 +201,7 @@ struct HomeView: View {
     var editFarmName: some View{
         ZStack{
             VStack{
-                TextField("Nome Haras/Faenda", text: model.bindings.farmName)
+                TextField("Nome Haras/Fazenda", text: model.bindings.farmName)
                     .padding()
                     .overlay(
                         TextFieldOverlay().shape()
