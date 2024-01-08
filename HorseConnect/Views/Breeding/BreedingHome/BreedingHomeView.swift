@@ -34,8 +34,9 @@ struct BreedingHomeView: View {
                             navigateDestination = .embryos
                             navigate.toggle()
                         }
-                        CardViewRow(imagePath: "insemination", title: "Inseminação", farmData: farmData){
-                            
+                        CardViewRow(imagePath: "insemination", title: "Inseminação/Cobrição", farmData: farmData){
+                            navigateDestination = .inseminations
+                            navigate.toggle()
                         }
                         CardViewRow(imagePath: "giveBirth", title: "Partos", farmData: farmData){
                             
@@ -59,7 +60,7 @@ struct BreedingHomeView: View {
                     switch(destination){
                         case .animals: AnimalsListView(animalType: AnimalType.animalOutside)
                         case .embryos: EmbryoListView()
-                        case .inseminations: AnimalsListView(animalType: AnimalType.animalOutside)
+                        case .inseminations: InseminationListView()
                         case .giveBirth: AnimalsListView(animalType: AnimalType.animalOutside)
                     }
                 }

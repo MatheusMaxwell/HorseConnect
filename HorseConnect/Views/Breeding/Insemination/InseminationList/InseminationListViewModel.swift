@@ -8,21 +8,21 @@
 import Foundation
 import Combine
 
-final class EmbryoListViewModel: ObservableObject {
+final class InseminationListViewModel: ObservableObject {
     
-    @Published private(set) var state: EmbryoListViewState
+    @Published private(set) var state: InseminationListViewState
     private let repository = Repository()
     
-    init(state: EmbryoListViewState = .init()){
+    init(state: InseminationListViewState = .init()){
         self.state = state
     }
     
     
-    func getEmbryos(){
+    func getInseminations(){
         self.state.loading = true
         self.repository.getEmbryos(){ embryoList in
             if let embryos = embryoList {
-                self.state.embryos = embryos.filter { !$0.receiverId.isEmpty }
+                self.state.inseminations = embryos.filter { $0.receiverId.isEmpty }
             }
             else{
                 self.state.showError = true

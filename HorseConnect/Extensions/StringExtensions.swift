@@ -62,4 +62,24 @@ extension String {
     func fileName() -> String {
         return (self.components(separatedBy: "%").last?.components(separatedBy: "?").first!) ?? ""
     }
+    
+    func birthPrediction() -> String? {
+        let start = sumDaysReturnStringDate(days: 310)
+        let end = sumDaysReturnStringDate(days: 365)
+        if start.isEmpty && end.isEmpty {
+            return nil
+        }
+        return "\(start) à \(end)"
+    }
+    
+    private func sumDaysReturnStringDate(days: Int) -> String {
+        let newFormatter = ISO8601DateFormatter()
+        let birthDate = newFormatter.date(from: self)
+        var dayComponent = DateComponents()
+        dayComponent.day = days
+        if let nextDate = Calendar.current.date(byAdding: dayComponent, to: birthDate ?? Date()) {
+            return nextDate.ISO8601Format().getDateFromIsoDateString()
+        }
+        return ""
+    }
 }

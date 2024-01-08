@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct EmbryoDetailView: View {
+struct InseminationDetailView: View {
     var embryo: Embryo
-    @StateObject private var model = EmbryoDetailViewModel()
+    @StateObject private var model = InseminationDetailViewModel()
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -38,9 +38,8 @@ struct EmbryoDetailView: View {
                     model.getAnimalById(animalId: embryo.femaleId)
                 }
                 Group{
-                    TitleDescriptionView(title: "Receptora", description: embryo.receiver)
-                        .padding(.top, 40)
                     TitleDescriptionView(title: "Data", description: embryo.date.getDateFromIsoDateString())
+                        .padding(.top, 40)
                     TitleDescriptionView(title: "Sexo", description: embryo.sex)
                     TitleDescriptionView(title: "Situação", description: embryo.status)
                     TitleDescriptionView(title: "Previsão de parto", description: embryo.date.birthPrediction() ?? "Não disponível")
@@ -77,7 +76,7 @@ struct EmbryoDetailView: View {
     }
 }
 
-struct EmbryoDetailView_Previews: PreviewProvider {
+struct InseminationDetailView_Previews: PreviewProvider {
     static var previews: some View {
         EmbryoDetailView(embryo: Embryo(female: "Fortune Lumiar", femaleId: "", male: "Lobo Lumiar", maleId: "", receiver: "Tordilha pampa", receiverId: "", date: "2022-12-01T00:35:04Z", userId: "", sex: "Indisponível", status: "A confirmar"))
     }

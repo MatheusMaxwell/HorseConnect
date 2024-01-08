@@ -89,6 +89,16 @@
 		30FD3BD42939103800ABCE8E /* EmbryoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BD32939103800ABCE8E /* EmbryoDetailViewModel.swift */; };
 		30FD3BD62939106300ABCE8E /* EmbryoDetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD3BD52939106300ABCE8E /* EmbryoDetailViewState.swift */; };
 		A90E3C542B48FCA800847175 /* ItemHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C532B48FCA800847175 /* ItemHeaderView.swift */; };
+		A90E3C592B4C5C1A00847175 /* InseminationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C582B4C5C1A00847175 /* InseminationListView.swift */; };
+		A90E3C5B2B4C5C4900847175 /* InseminationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C5A2B4C5C4900847175 /* InseminationListViewModel.swift */; };
+		A90E3C5D2B4C5C7400847175 /* InseminationListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C5C2B4C5C7400847175 /* InseminationListViewState.swift */; };
+		A90E3C5F2B4C5FB000847175 /* InseminationRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C5E2B4C5FB000847175 /* InseminationRegisterView.swift */; };
+		A90E3C612B4C5FF200847175 /* InseminationRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C602B4C5FF200847175 /* InseminationRegisterViewModel.swift */; };
+		A90E3C632B4C600000847175 /* InseminationRegisterViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C622B4C600000847175 /* InseminationRegisterViewState.swift */; };
+		A90E3C652B4C653400847175 /* InseminationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C642B4C653400847175 /* InseminationDetailView.swift */; };
+		A90E3C672B4C656000847175 /* InseminationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C662B4C656000847175 /* InseminationDetailViewModel.swift */; };
+		A90E3C692B4C658400847175 /* InseminationDetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C682B4C658400847175 /* InseminationDetailViewState.swift */; };
+		A90E3C6C2B4C735000847175 /* AnimalNameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C6B2B4C735000847175 /* AnimalNameDetail.swift */; };
 		A9B6519D2AE0BB8B00BF682D /* ImageViewCached.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B6519C2AE0BB8B00BF682D /* ImageViewCached.swift */; };
 		A9B651A02AE0BBB700BF682D /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B6519F2AE0BBB700BF682D /* ImageManager.swift */; };
 		B30BB05AD8A596DAF5201755 /* Pods_HorseConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */; };
@@ -180,6 +190,16 @@
 		30FD3BD52939106300ABCE8E /* EmbryoDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbryoDetailViewState.swift; sourceTree = "<group>"; };
 		6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HorseConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90E3C532B48FCA800847175 /* ItemHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHeaderView.swift; sourceTree = "<group>"; };
+		A90E3C582B4C5C1A00847175 /* InseminationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InseminationListView.swift; sourceTree = "<group>"; };
+		A90E3C5A2B4C5C4900847175 /* InseminationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InseminationListViewModel.swift; sourceTree = "<group>"; };
+		A90E3C5C2B4C5C7400847175 /* InseminationListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InseminationListViewState.swift; sourceTree = "<group>"; };
+		A90E3C5E2B4C5FB000847175 /* InseminationRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InseminationRegisterView.swift; sourceTree = "<group>"; };
+		A90E3C602B4C5FF200847175 /* InseminationRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InseminationRegisterViewModel.swift; sourceTree = "<group>"; };
+		A90E3C622B4C600000847175 /* InseminationRegisterViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InseminationRegisterViewState.swift; sourceTree = "<group>"; };
+		A90E3C642B4C653400847175 /* InseminationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InseminationDetailView.swift; sourceTree = "<group>"; };
+		A90E3C662B4C656000847175 /* InseminationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InseminationDetailViewModel.swift; sourceTree = "<group>"; };
+		A90E3C682B4C658400847175 /* InseminationDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InseminationDetailViewState.swift; sourceTree = "<group>"; };
+		A90E3C6B2B4C735000847175 /* AnimalNameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalNameDetail.swift; sourceTree = "<group>"; };
 		A9B6519B2AE067EC00BF682D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A9B6519C2AE0BB8B00BF682D /* ImageViewCached.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCached.swift; sourceTree = "<group>"; };
 		A9B6519F2AE0BBB700BF682D /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
@@ -212,6 +232,7 @@
 		303BD1EA291D689F007E43B3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A90E3C6A2B4C733A00847175 /* AnimalNameDetail */,
 				A90E3C522B48FC8300847175 /* ItemHeader */,
 				A9B6519E2AE0BB9600BF682D /* ImageViewCached */,
 				30FD3BCE2938CDE800ABCE8E /* TitleDescription */,
@@ -488,7 +509,7 @@
 			children = (
 				30FD3BBD29380E0000ABCE8E /* Embryos */,
 				30FD3BB22936C8BF00ABCE8E /* GiveBirthList */,
-				30FD3BB12936C8B000ABCE8E /* InseminationList */,
+				30FD3BB12936C8B000ABCE8E /* Insemination */,
 				30FD3BAA2936C1E100ABCE8E /* BreedingHome */,
 			);
 			path = Breeding;
@@ -520,11 +541,14 @@
 			path = EmbryoList;
 			sourceTree = "<group>";
 		};
-		30FD3BB12936C8B000ABCE8E /* InseminationList */ = {
+		30FD3BB12936C8B000ABCE8E /* Insemination */ = {
 			isa = PBXGroup;
 			children = (
+				A90E3C572B4C5BEE00847175 /* InseminationDetail */,
+				A90E3C562B4C5BE400847175 /* InseminationRegister */,
+				A90E3C552B4C5BD500847175 /* InseminationList */,
 			);
-			path = InseminationList;
+			path = Insemination;
 			sourceTree = "<group>";
 		};
 		30FD3BB22936C8BF00ABCE8E /* GiveBirthList */ = {
@@ -595,6 +619,44 @@
 				A90E3C532B48FCA800847175 /* ItemHeaderView.swift */,
 			);
 			path = ItemHeader;
+			sourceTree = "<group>";
+		};
+		A90E3C552B4C5BD500847175 /* InseminationList */ = {
+			isa = PBXGroup;
+			children = (
+				A90E3C582B4C5C1A00847175 /* InseminationListView.swift */,
+				A90E3C5A2B4C5C4900847175 /* InseminationListViewModel.swift */,
+				A90E3C5C2B4C5C7400847175 /* InseminationListViewState.swift */,
+			);
+			path = InseminationList;
+			sourceTree = "<group>";
+		};
+		A90E3C562B4C5BE400847175 /* InseminationRegister */ = {
+			isa = PBXGroup;
+			children = (
+				A90E3C5E2B4C5FB000847175 /* InseminationRegisterView.swift */,
+				A90E3C602B4C5FF200847175 /* InseminationRegisterViewModel.swift */,
+				A90E3C622B4C600000847175 /* InseminationRegisterViewState.swift */,
+			);
+			path = InseminationRegister;
+			sourceTree = "<group>";
+		};
+		A90E3C572B4C5BEE00847175 /* InseminationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A90E3C642B4C653400847175 /* InseminationDetailView.swift */,
+				A90E3C662B4C656000847175 /* InseminationDetailViewModel.swift */,
+				A90E3C682B4C658400847175 /* InseminationDetailViewState.swift */,
+			);
+			path = InseminationDetail;
+			sourceTree = "<group>";
+		};
+		A90E3C6A2B4C733A00847175 /* AnimalNameDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A90E3C6B2B4C735000847175 /* AnimalNameDetail.swift */,
+			);
+			path = AnimalNameDetail;
 			sourceTree = "<group>";
 		};
 		A9B6519E2AE0BB9600BF682D /* ImageViewCached */ = {
@@ -738,9 +800,11 @@
 				3077DA39291E8BE8002D6607 /* ColorUtil.swift in Sources */,
 				3077DA35291E7451002D6607 /* HomeViewState.swift in Sources */,
 				30E21722292C0072006435C2 /* CachedImageView.swift in Sources */,
+				A90E3C592B4C5C1A00847175 /* InseminationListView.swift in Sources */,
 				30FD3BC829381BD000ABCE8E /* EmbryoEntityExtensions.swift in Sources */,
 				3077DA20291DC85F002D6607 /* ToolbarViewModel.swift in Sources */,
 				30A21FA1291D270E000EF7D4 /* SplashViewModel.swift in Sources */,
+				A90E3C5F2B4C5FB000847175 /* InseminationRegisterView.swift in Sources */,
 				30A21FA4291D274C000EF7D4 /* BindingExtensions.swift in Sources */,
 				30A21FB3291D2A57000EF7D4 /* TextFieldOverlay.swift in Sources */,
 				3077DA26291DED06002D6607 /* ImagePicker.swift in Sources */,
@@ -750,11 +814,15 @@
 				30A21FAF291D2963000EF7D4 /* CornerRadiusStyle.swift in Sources */,
 				30FD3B92292D2BB600ABCE8E /* Geneology.swift in Sources */,
 				3077DA2C291DF924002D6607 /* FarmData.swift in Sources */,
+				A90E3C632B4C600000847175 /* InseminationRegisterViewState.swift in Sources */,
 				3077DA29291DF4FF002D6607 /* Repository.swift in Sources */,
+				A90E3C652B4C653400847175 /* InseminationDetailView.swift in Sources */,
+				A90E3C612B4C5FF200847175 /* InseminationRegisterViewModel.swift in Sources */,
 				30FD3BB82938055C00ABCE8E /* EmbryoListViewModel.swift in Sources */,
 				30E217022929762F006435C2 /* CardView.swift in Sources */,
 				3077DA24291DC8F2002D6607 /* NavigationUtil.swift in Sources */,
 				303BD1ED291D68B4007E43B3 /* ProgressView.swift in Sources */,
+				A90E3C6C2B4C735000847175 /* AnimalNameDetail.swift in Sources */,
 				30A21FB1291D2994000EF7D4 /* OverlayModifier.swift in Sources */,
 				30FD3BA2292D534400ABCE8E /* AnimalEntityExtensions.swift in Sources */,
 				30FD3B9B292D508A00ABCE8E /* HorseConnectDB.xcdatamodeld in Sources */,
@@ -781,6 +849,7 @@
 				303F984929464EDF00D9FD31 /* ImageUtil.swift in Sources */,
 				30FD3B9F292D52AD00ABCE8E /* DataController.swift in Sources */,
 				30FD3BAC2936C1F700ABCE8E /* BreedingHomeView.swift in Sources */,
+				A90E3C672B4C656000847175 /* InseminationDetailViewModel.swift in Sources */,
 				30FD3BA8292D600500ABCE8E /* NetworkMonitor.swift in Sources */,
 				3077DA33291E0366002D6607 /* SingletonUtil.swift in Sources */,
 				30A21FB9291D2B94000EF7D4 /* TextExtensions.swift in Sources */,
@@ -791,6 +860,7 @@
 				30E217132929CC5C006435C2 /* AnimalsRegisterViewState.swift in Sources */,
 				30E216F929296CEF006435C2 /* Animal.swift in Sources */,
 				303BD1E7291D4239007E43B3 /* HomeView.swift in Sources */,
+				A90E3C5D2B4C5C7400847175 /* InseminationListViewState.swift in Sources */,
 				30FD3BC029380E2600ABCE8E /* EmbryoRegisterView.swift in Sources */,
 				30A21FB5291D2AC0000EF7D4 /* ButtonExtensions.swift in Sources */,
 				30FD3BD62939106300ABCE8E /* EmbryoDetailViewState.swift in Sources */,
@@ -800,6 +870,7 @@
 				3077DA21291DC85F002D6607 /* ToolbarView.swift in Sources */,
 				3077DA31291DFFC8002D6607 /* UIColorEtensions.swift in Sources */,
 				30A21FB7291D2B3E000EF7D4 /* ColorExtensions.swift in Sources */,
+				A90E3C5B2B4C5C4900847175 /* InseminationListViewModel.swift in Sources */,
 				30FD3BCA2938282900ABCE8E /* TimeIntervalExtensions.swift in Sources */,
 				30E217062929A7F3006435C2 /* AnimalExtensions.swift in Sources */,
 				30FD3BCD2938C59000ABCE8E /* EmbryoDetailView.swift in Sources */,
@@ -807,6 +878,7 @@
 				30FD3BBC2938059800ABCE8E /* Embryo.swift in Sources */,
 				30FD3BC62938153700ABCE8E /* EmbryoExtensions.swift in Sources */,
 				303F98472946374F00D9FD31 /* URLCacheExtensions.swift in Sources */,
+				A90E3C692B4C658400847175 /* InseminationDetailViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
