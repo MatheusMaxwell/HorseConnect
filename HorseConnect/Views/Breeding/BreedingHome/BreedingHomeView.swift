@@ -39,7 +39,8 @@ struct BreedingHomeView: View {
                             navigate.toggle()
                         }
                         CardViewRow(imagePath: "giveBirth", title: "Partos", farmData: farmData){
-                            
+                            navigateDestination = .giveBirth
+                            navigate.toggle()
                         }
                         
                         CardViewRow(imagePath: "HorseCardHome", title: "Animais usados de fora", farmData: farmData){
@@ -61,7 +62,7 @@ struct BreedingHomeView: View {
                         case .animals: AnimalsListView(animalType: AnimalType.animalOutside)
                         case .embryos: EmbryoListView()
                         case .inseminations: InseminationListView()
-                        case .giveBirth: AnimalsListView(animalType: AnimalType.animalOutside)
+                        case .giveBirth: GiveBirthListView()
                     }
                 }
             }

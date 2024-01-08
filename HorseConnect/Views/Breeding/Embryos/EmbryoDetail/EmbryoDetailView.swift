@@ -37,9 +37,11 @@ struct EmbryoDetailView: View {
                 AnimalNameDetail(name: embryo.female) {
                     model.getAnimalById(animalId: embryo.femaleId)
                 }
+                .padding(.bottom, 40)
                 Group{
-                    TitleDescriptionView(title: "Receptora", description: embryo.receiver)
-                        .padding(.top, 40)
+                    if embryo.receiver.isEmpty == false {
+                        TitleDescriptionView(title: "Receptora", description: embryo.receiver)
+                    }
                     TitleDescriptionView(title: "Data", description: embryo.date.getDateFromIsoDateString())
                     TitleDescriptionView(title: "Sexo", description: embryo.sex)
                     TitleDescriptionView(title: "Situação", description: embryo.status)

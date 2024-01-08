@@ -99,6 +99,9 @@
 		A90E3C672B4C656000847175 /* InseminationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C662B4C656000847175 /* InseminationDetailViewModel.swift */; };
 		A90E3C692B4C658400847175 /* InseminationDetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C682B4C658400847175 /* InseminationDetailViewState.swift */; };
 		A90E3C6C2B4C735000847175 /* AnimalNameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C6B2B4C735000847175 /* AnimalNameDetail.swift */; };
+		A90E3C6E2B4CB9EA00847175 /* GiveBirthListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C6D2B4CB9EA00847175 /* GiveBirthListView.swift */; };
+		A90E3C702B4CBA6200847175 /* GiveBirthListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C6F2B4CBA6200847175 /* GiveBirthListViewModel.swift */; };
+		A90E3C722B4CBA7400847175 /* GiveBirthListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90E3C712B4CBA7400847175 /* GiveBirthListViewState.swift */; };
 		A9B6519D2AE0BB8B00BF682D /* ImageViewCached.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B6519C2AE0BB8B00BF682D /* ImageViewCached.swift */; };
 		A9B651A02AE0BBB700BF682D /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B6519F2AE0BBB700BF682D /* ImageManager.swift */; };
 		B30BB05AD8A596DAF5201755 /* Pods_HorseConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B252A3669A51FD1CB4BB8B8 /* Pods_HorseConnect.framework */; };
@@ -200,6 +203,9 @@
 		A90E3C662B4C656000847175 /* InseminationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InseminationDetailViewModel.swift; sourceTree = "<group>"; };
 		A90E3C682B4C658400847175 /* InseminationDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InseminationDetailViewState.swift; sourceTree = "<group>"; };
 		A90E3C6B2B4C735000847175 /* AnimalNameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalNameDetail.swift; sourceTree = "<group>"; };
+		A90E3C6D2B4CB9EA00847175 /* GiveBirthListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GiveBirthListView.swift; path = HorseConnect/Views/Shared/AnimalNameDetail/GiveBirthListView.swift; sourceTree = SOURCE_ROOT; };
+		A90E3C6F2B4CBA6200847175 /* GiveBirthListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GiveBirthListViewModel.swift; path = HorseConnect/Views/Shared/AnimalNameDetail/GiveBirthListViewModel.swift; sourceTree = SOURCE_ROOT; };
+		A90E3C712B4CBA7400847175 /* GiveBirthListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GiveBirthListViewState.swift; path = HorseConnect/Views/Shared/AnimalNameDetail/GiveBirthListViewState.swift; sourceTree = SOURCE_ROOT; };
 		A9B6519B2AE067EC00BF682D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A9B6519C2AE0BB8B00BF682D /* ImageViewCached.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCached.swift; sourceTree = "<group>"; };
 		A9B6519F2AE0BBB700BF682D /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
@@ -554,6 +560,9 @@
 		30FD3BB22936C8BF00ABCE8E /* GiveBirthList */ = {
 			isa = PBXGroup;
 			children = (
+				A90E3C6D2B4CB9EA00847175 /* GiveBirthListView.swift */,
+				A90E3C6F2B4CBA6200847175 /* GiveBirthListViewModel.swift */,
+				A90E3C712B4CBA7400847175 /* GiveBirthListViewState.swift */,
 			);
 			path = GiveBirthList;
 			sourceTree = "<group>";
@@ -838,6 +847,7 @@
 				30FD3BBA2938057A00ABCE8E /* EmbryoListViewState.swift in Sources */,
 				30A21FBD291D2BB4000EF7D4 /* LoginViewModel.swift in Sources */,
 				30E217172929DC5A006435C2 /* MultipleSelectionRow.swift in Sources */,
+				A90E3C6E2B4CB9EA00847175 /* GiveBirthListView.swift in Sources */,
 				30A21FBB291D2BAB000EF7D4 /* LoginViewState.swift in Sources */,
 				A9B6519D2AE0BB8B00BF682D /* ImageViewCached.swift in Sources */,
 				30A21F8F291D252A000EF7D4 /* HorseConnectApp.swift in Sources */,
@@ -853,6 +863,7 @@
 				30FD3BA8292D600500ABCE8E /* NetworkMonitor.swift in Sources */,
 				3077DA33291E0366002D6607 /* SingletonUtil.swift in Sources */,
 				30A21FB9291D2B94000EF7D4 /* TextExtensions.swift in Sources */,
+				A90E3C722B4CBA7400847175 /* GiveBirthListViewState.swift in Sources */,
 				30A21F9F291D2590000EF7D4 /* SplashView.swift in Sources */,
 				30E2171F292BFFCE006435C2 /* AnimalDetailView.swift in Sources */,
 				30FD3BD42939103800ABCE8E /* EmbryoDetailViewModel.swift in Sources */,
@@ -867,6 +878,7 @@
 				30FD3BC229380E9B00ABCE8E /* EmbryoRegisterViewModel.swift in Sources */,
 				30FD3BB6293804B200ABCE8E /* EmbryoListView.swift in Sources */,
 				30E216F729296A87006435C2 /* AnimalsListView.swift in Sources */,
+				A90E3C702B4CBA6200847175 /* GiveBirthListViewModel.swift in Sources */,
 				3077DA21291DC85F002D6607 /* ToolbarView.swift in Sources */,
 				3077DA31291DFFC8002D6607 /* UIColorEtensions.swift in Sources */,
 				30A21FB7291D2B3E000EF7D4 /* ColorExtensions.swift in Sources */,
